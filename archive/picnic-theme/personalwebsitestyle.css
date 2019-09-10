@@ -1,0 +1,429 @@
+:root {
+  	--grassfront: #49CE98;
+  	--skyblue: #d4e2fc;
+  	--creamwhite: #fffff0;
+  	--navyblue: #00274d;
+  	--displayfont: 'Staatliches', cursive;
+  	--bodyfont: 'Josefin Slab', sans-serif;
+}
+
+::selection {
+    background-color: rgb(0,39,77,.6);
+    color: var(--creamwhite);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: var(--bodyfont);
+	font-size: 62.5%;
+	background-color: var(--grassfront);
+}
+
+#main {
+  	background-color: var(--grassfront);
+  	width: 100%;
+}
+
+nav {
+  	display: flex;
+  	position: fixed;
+  	z-index: 10;
+  	width: 100%;
+  	height: 7%;
+  	align-items: center;
+  	justify-content: center;
+  	backdrop-filter: blur(1vw);
+  	-webkit-backdrop-filter: blur(1vw);
+  	margin: 0px;
+  	text-align: center;
+  	font-family: var(--displayfont);
+  	font-size: 1.5vw;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--navyblue);
+	padding: 1vw;
+	margin: 0px;
+	width: 15%;
+	transition: all 2s ease;
+}
+
+.navpage:hover {
+	color: var(--creamwhite);
+	/*padding: 1vw 3vw;*/
+	background-color: var(--navyblue);
+	transition: all .5s ease;
+}
+
+.active {
+	text-decoration: underline;
+}
+
+#logo{
+    width: 40%;
+    margin: 0px;
+    font-size: 2em;
+    padding: 0vw;
+    cursor: default;
+    transition: all .5s ease;
+}
+
+#homepageheader {
+	background-color: var(--skyblue);
+	margin: 0px;
+	height: 60%;
+	width: 100%;
+	display: table;
+	border: 0px solid white;
+	text-align: center;
+	outline: none;
+}
+
+#pageheader {
+	background-image: url("Assets/PicnicBlanketTexture.png");
+	background-size: 10%;
+	background-repeat: repeat;
+	margin: 0px;
+	height: 60%;
+	width: 100%;
+	display: table;
+	border: 0px solid white;
+	text-align: center;
+	outline: none;
+}
+
+.socialmediaoutside {
+	width: 100%;
+	margin: 0em auto;
+}
+
+.socialmedia {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin: 3em 0em;
+}
+
+.socialmedia a {
+	font-size: 8em;
+	font-family: var(--displayfont);
+	text-decoration: none;
+	color: var(--navyblue);
+	transition: all 1s ease;
+	border-bottom: .1em solid rgba(0,39,77,0);
+}
+
+.socialmedia a:hover {
+	border-bottom: .1em solid rgba(0,39,77,1);
+	transition: all .5s ease;
+}
+
+.divider {
+	font-size: 8em;
+	margin: .5em;
+	font-family: var(--displayfont);
+	text-decoration: none;
+	color: var(--navyblue);
+}
+
+#contactform {
+	width: 60%;
+	margin: 5vh auto;
+	padding: 1em;
+	font-size: 8em;
+	font-family: var(--displayfont);
+	color: var(--navyblue);
+	border: .1em solid var(--navyblue);
+}
+
+input[type=text], input[type=email] {
+	outline: none;
+	font-weight: 900;
+	color: var(--navyblue);
+	background-color: rgba(0,0,0,0);
+	font-family: var(--bodyfont);
+	width: 100%;
+	margin-top: 0vh;
+	margin-bottom: 5vh;
+	font-size: .7em;
+	appearance: none;
+	border: 0;
+	border-bottom: .1em solid var(--navyblue);
+	transition: all 1s ease;
+}
+
+input[type=text]:hover, input[type=email]:hover {
+	border-bottom: .1em solid var(--creamwhite);
+	color: var(--creamwhite);
+	transition: all .5s ease;
+}
+
+
+input[type=submit] {
+	display: block;
+	outline: none;
+	border: 0;
+	appearance: none;
+	color: var(--navyblue);
+	font-size: 1em;
+	font-family: var(--displayfont);
+	background-color: rgba(0,0,0,0);
+	border: .0em solid var(--navyblue);
+	padding: .3em .8em;
+	margin: 0 auto;
+	margin-top: 5vh;
+	transition: background-color 1s ease, color 1s ease;
+}
+
+input[type=submit]:hover {
+	background-color: var(--navyblue);
+	color: var(--creamwhite);
+	transition: background-color 1s ease, color 1s ease;
+}
+
+textarea {
+	outline: none;
+	font-size: .5em;
+	resize: none;
+	padding: .5em;
+	height: 20vh;
+	width: 96%;
+	margin-top: 3vh;
+	margin-bottom: 0vh;
+	font-weight: 900;
+	color: var(--navyblue);
+	background-color: rgba(255,255,255,0);
+	font-family: var(--bodyfont);
+	border: .15em solid var(--navyblue);
+	transition: all 1s ease;
+}
+
+textarea:hover {
+	color: var(--creamwhite);
+	border: .15em solid var(--creamwhite);
+}
+
+#headings{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	padding-top: 2vw;
+}
+
+h1 {
+	text-align: center;
+	color: var(--navyblue);
+	font-size: 8vw;
+	margin: 0vw;
+	font-family: var(--displayfont);
+}
+
+h2 {
+	text-align: center;
+	color: var(--navyblue);
+	font-size: 3vw;
+	margin: 0vw;
+	font-family: var(--displayfont);
+}
+
+.homepagelink {
+	margin: 0;
+	text-decoration: none;
+	color: var(--navyblue);
+	transition: all 2s ease;
+	border-bottom: .04em solid rgba(0,39,77,0);
+}
+
+.homepagelink:hover {
+	border-bottom: .04em solid rgba(0,39,77,1);
+	transition: all .5s ease;
+}
+
+.intro {
+	width: 100vw;
+	height: 33%;
+	display: flex;
+	margin: 3vw 0vw;
+	justify-content: center;
+  	align-items: center; 
+}
+
+#about {
+	width: 60%;
+	display: block;
+	padding: 2em 3em;
+	margin: 0 auto;
+	margin-top: 5vh;
+	font: var(--bodyfont);
+	color: var(--creamwhite);
+	font-size: 5em;
+	text-align: justify;
+	border: .2em solid var(--navyblue);
+}
+
+#about p{
+	line-height: 1.6;
+	font-weight: 500;
+}
+
+.importanttext {
+	color: var(--navyblue);
+	background-color: rgba(0,0,0,0);
+}
+
+#basket {
+	width: 40%;
+	position: relative;
+	z-index: 6;
+	vertical-align: center;
+	padding-left: 5vw;
+}
+
+#tea {
+	width: 35%;
+	position: relative;
+	z-index: 6;
+	padding-right: 10vw;
+	vertical-align: center;
+}
+
+#sandwiches {
+	width: 35%;
+	position: relative;
+	z-index: 6;
+	vertical-align: center;
+	padding-left: 10vw;
+}
+
+.blurb {
+	width: 45%;
+	display: inline-block;
+	line-height: 3vw;
+	color: var(--creamwhite);
+	font-size: 2vw;
+	font-weight: 400;
+	font-family: var(--bodyfont);
+	text-align: justify;
+  	text-justify: auto;
+  	vertical-align: center;
+  	position: relative;
+  	top: 10%;
+}
+
+#blurb1 {
+}
+
+#blurb2 {
+	float: right;
+}
+
+#blurb3 {
+}
+
+#grasshome {
+	background-color: var(--skyblue);
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	padding: 0vh;
+	outline: none;
+	margin: 0vh;
+}
+
+#grass {
+	background-image: url("Assets/PicnicBlanketTexture.png");
+	background-size: 10%;
+	background-repeat: repeat;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	padding: 0px;
+	outline: none;
+}
+
+#grasssize {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 5;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+#grasscover {
+	width: 100%;
+	position: relative;
+	z-index: 5;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+#grassfront {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	overflow: hidden;
+	z-index: 4;
+	padding: 0px;
+	display: block;
+}
+
+#grassmiddle {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	overflow: hidden;
+	z-index: 3;
+	padding: 0px;
+	display: block;
+}
+
+#grassback {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+	padding: 0px;
+	display: block;
+}
+
+#bee1{
+	position: absolute;
+	z-index: 4;
+	width: 10vw;
+	top: 31vh;
+	left: 16vw;
+	transform: rotate(20deg);
+}
+
+#bee2{
+	position: absolute;
+	z-index: 4;
+	width: 10vw;
+	top: 44vh;
+	right: 18vw;
+	transform: rotate(255deg);
+}
+
+#bee1path{
+	position: absolute;
+	z-index: 1;
+	width: 20%;
+	top: 40vh;}
+
+#bee2path{
+	position: absolute;
+	z-index: 1;
+	width: 20%;
+	top: 5vh;
+	right: 0%;
+}
