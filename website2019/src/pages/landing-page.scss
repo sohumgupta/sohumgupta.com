@@ -1,0 +1,49 @@
+$bg-color: #F9F9F8;
+$primary: #FFBA9D;
+$mainfont: Avenir, Century Gothic, sans-serif;
+
+#landing-page-text {
+	text-transform: uppercase;
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: 700;
+	letter-spacing: .25em;
+	font-family: $mainfont;
+}
+
+#landing-page-top {
+	height: 50%;
+	display: flex;
+  justify-content: center;
+	align-items: flex-end;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+#landing-page-bottom {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+#landing-page {
+	height: 100vh;
+	width: 100vw;
+	background-color: $bg-color;
+}
+
+#circle-1 {
+	border-radius: 50%;
+	width: 30vw;
+	height: 30vw;
+	position: absolute;
+	z-index: 0;
+}
+
+#circle-2 {
+	border-radius: 50%;
+	width: 20vw;
+	height: 20vw;
+	position: absolute;
+	z-index: 0;
+}
