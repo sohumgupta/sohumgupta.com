@@ -1,3 +1,23 @@
+@font-face {
+font-family: 'Nitti Normal';
+font-style: normal;
+font-weight: normal;
+src: local('Nitti Normal'), url('../fonts/Nitti-Normal.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Nitti Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Nitti Bold'), url('../fonts/Nitti-Bold.woff') format('woff');
+}
+
+$bg-color: #F9F9F8;
+$primary: #FFBA9D;
+$nav-color: #943913;
+$mainfont: Avenir, Century Gothic, sans-serif;
+$bodyfont: 'Nitti Normal', monospace;
+
 .work-header {
 	max-width: 100% !important;
   overflow: hidden;
@@ -24,19 +44,19 @@
 
 .work-descrip {
 	font-size: 1.5em;
-  font-weight: 400;
 	margin: 0;
 	display: inline-block;
 	float: left;
+	font-family: $bodyfont;
 }
 
 .work-technologies {
 	font-size: 1.5em;
-  font-weight: 400;
 	margin: 0;
 	display: inline-block;
 	float: left;
 	margin-left: .2em;
+	font-family: $bodyfont;
 }
 
 .back {

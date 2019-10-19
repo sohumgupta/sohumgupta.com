@@ -31,7 +31,7 @@ class LandingPage extends React.Component {
 						<p id="landing-page-text">Hi, I'm Sohum Gupta.</p>
 					</div>
 					<div id="landing-page-bottom">
-						<ExpandCircleButton url="/work" text="see more"></ExpandCircleButton>
+						<ExpandCircleButton url="/work" text="learn about me!"></ExpandCircleButton>
 					</div>
 					<Circles x={this.state.x} y={this.state.y}></Circles>
 				</div>

@@ -29,8 +29,10 @@ class MixrPage extends React.Component {
 		return (
 			<div id="body">
 				<div id="mixr-page">
-					<WorkHeader image={MIXRHeader} name="MIXR" descrip="Created for Hack@Brown 2019" technologies="HTML, CSS, PHP, JavaScript">
-			</WorkHeader>
+					<WorkHeader image={MIXRHeader} name="MIXR" descrip="Created for Hack@Brown 2019" technologies="HTML, CSS, PHP, JavaScript"/>
+					<div className="content">
+						
+					</div>
 				</div>
 			</div>
 		);
