@@ -31,19 +31,3 @@ $mainfont: Avenir, Century Gothic, sans-serif;
 	width: 100vw;
 	background-color: $bg-color;
 }
-
-#circle-1 {
-	border-radius: 50%;
-	width: 30vw;
-	height: 30vw;
-	position: absolute;
-	z-index: 0;
-}
-
-#circle-2 {
-	border-radius: 50%;
-	width: 20vw;
-	height: 20vw;
-	position: absolute;
-	z-index: 0;
-}

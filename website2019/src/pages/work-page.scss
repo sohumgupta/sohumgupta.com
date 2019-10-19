@@ -9,36 +9,12 @@ body {
 }
 
 #work-container {
-	height: 120vh;
+	height: 160vh;
 	padding: 20vh 8em 10vh 8em;
 	box-sizing: border-box;
 	display: grid;
 	grid-gap: 2em 2em;
-	grid-template: 1fr 1fr / auto auto;
+	grid-template: 1fr 1fr 1fr / auto auto;
 	width: 100%;
 	background-color: $bg-color;
-}
-
-.card {
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-start;
-	padding: 1em;
-	background-size: cover;
-	background-position: bottom;
-	color: white;
-	background-color: grey;
-}
-
-.card-name {
-	color: white;
-}
-
-#work-name {
-	font-size: 2em;
-}
-
-#work-descrip {
-	font-size: 1.5em;
-	font-style: italic;
 }

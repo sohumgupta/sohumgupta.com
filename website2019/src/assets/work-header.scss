@@ -1,0 +1,52 @@
+.work-header {
+	max-width: 100% !important;
+  overflow: hidden;
+	display: grid;
+	grid-rows: 1;
+	padding: 1em;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+	background-color: grey;
+	z-index: 2;
+	height: 30vh;
+	box-shadow: 0em -7em 7em -3em rgba(0,0,0,0.7) inset;
+}
+
+.work-name {
+	font-size: 3em;
+  font-weight: 900;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+	margin: 0;
+}
+
+.work-descrip {
+	font-size: 1.5em;
+  font-weight: 400;
+	margin: 0;
+	display: inline-block;
+	float: left;
+}
+
+.work-technologies {
+	font-size: 1.5em;
+  font-weight: 400;
+	margin: 0;
+	display: inline-block;
+	float: left;
+	margin-left: .2em;
+}
+
+.back {
+	grid-row: 1;
+	padding-top: 1em;
+}
+
+.titles {
+	grid-row: 2;
+	align-self: end;
+	justify-self: start;
+}
+

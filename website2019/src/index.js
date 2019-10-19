@@ -2,19 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+	Redirect,
+  Link,
+	NavLink,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 import LandingPage from './pages/landing-page.js';
 import WorkPage from './pages/work-page.js';
+import MixrPage from './pages/work-pages/mixr-page.js';
 
 function App() {
-	//return <LandingPage></LandingPage>;
-	//return <WorkPage></WorkPage>
 	return (
 		<div className="app">
 			<Switch>
 				<Route exact path="/" component={LandingPage}/>
-				<Route path="/work" component={WorkPage} />
+				<Route exact path="/work" component={WorkPage} />
+				<Route exact path="/work/mixr" component={MixrPage} />
 			</Switch>
 		</div>
 	);

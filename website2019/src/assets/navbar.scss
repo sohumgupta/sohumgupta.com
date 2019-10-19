@@ -8,6 +8,7 @@ $mainfont: Avenir, Century Gothic, sans-serif;
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 5;
 }
 
 ul {
@@ -18,7 +19,6 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-  background-color: $primary;
 	color: white;
 	z-index: 10;
 }
@@ -29,7 +29,7 @@ ul li {
 	padding: 1.5em 2em;
 	float: left;
 	transition: all .5s ease;
-	border-bottom: .2em solid $primary;
+	border-bottom: .2em solid rgba(0,0,0,0);
 }
 
 li a {
@@ -50,7 +50,6 @@ li a {
 
 .active {
 	font-weight: 700;
-	border-bottom: .2em solid $primary;
 }
 
 #navbar-right {
