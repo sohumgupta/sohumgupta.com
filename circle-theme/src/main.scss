@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Nitti Normal';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Nitti Normal'), url('./fonts/Nitti-Normal.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Nitti Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Nitti Bold'), url('./fonts/Nitti-Bold.woff') format('woff');
+}
+
+$bg-color: #F9F9F8;
+$primary-light: #FAC7C3;
+$primary: #F7A29C;
+$primary-medium: #FA7268;
+$primary-dark: #D93B30;
+$mainfont: Avenir, Century Gothic, sans-serif;
+$bodyfont: 'Nitti Normal', monospace;
+
+#root {
+	background-color: $bg-color;
+}

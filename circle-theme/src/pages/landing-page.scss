@@ -1,0 +1,31 @@
+@import '../main.scss';
+
+#landing-page-text {
+	text-transform: uppercase;
+	font-size: 5vh;
+	line-height: 5vh;
+	font-weight: 700;
+	letter-spacing: 1vh;
+	font-family: $mainfont;
+}
+
+#landing-page-top {
+	height: 50%;
+	display: flex;
+  justify-content: center;
+	align-items: flex-end;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+#landing-page-bottom {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+#landing-page {
+	height: 100vh;
+	width: 100vw;
+	background-color: $bg-color;
+}

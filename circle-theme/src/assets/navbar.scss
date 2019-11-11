@@ -1,0 +1,56 @@
+@import '../main.scss';
+
+#navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+ul {
+	display: inline-block;
+	float: left;
+  top: 0;
+  width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color: white;
+	z-index: 10;
+}
+
+ul li {
+	display: inline-block;
+	margin: 0em;
+	padding: 3vh 4vh;
+	float: left;
+	transition: all .5s ease;
+	border-bottom: .3vh solid rgba(0,0,0,0);
+}
+
+li a {
+	font-size: 3vh;
+	text-decoration: none;
+	font-family: $mainfont;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: .25em;
+	color: black;
+}
+
+.link:hover {
+	border-bottom: .3vh solid black;
+	transition: all .5s ease;
+}
+
+.active {
+	font-weight: 700;
+}
+
+#navbar-right {
+	float: right;
+	padding: 0;
+	margin: 0;
+}

@@ -1,0 +1,57 @@
+@import '../main.scss';
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.expand-circle {
+  position: relative;
+	height: 2vh;
+  padding: 2vh 2.4vh;
+  transition: all .2s ease;
+	&:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 10em;
+    background: rgba($primary,.5);
+    width: 7vh;
+    height: 7vh;
+    transition: all .3s ease;
+	}
+	span {
+    position: relative;
+    font-size: 2vh;
+    line-height: 3vh;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+	}
+	svg {
+    position: relative;
+    top: 0;
+    margin-left: 2vh;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+	}
+	&:hover {
+			&:before {
+				width: 100%;
+				background: rgba($primary,1);
+			svg {
+					transform: translateX(0px);
+			}
+		}
+	}
+	&:active {
+    transform: scale(.98);
+	}
+}

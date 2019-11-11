@@ -1,0 +1,29 @@
+@import '../main.scss';
+
+.card {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	padding: 2vh;
+	padding-bottom: 3vh;
+	background-size: cover;
+	background-position: bottom;
+	color: white;
+	background-color: grey;
+	z-index: 2;
+	border-radius: 0em;
+	box-shadow: 0em -10em 7em -7em rgba(0,0,0,0.3) inset;
+}
+
+.card-name {
+	color: white;
+}
+
+#work-name {
+	font-size: 2em;
+}
+
+#work-descrip {
+	font-size: 1.5em;
+	font-style: italic;
+}

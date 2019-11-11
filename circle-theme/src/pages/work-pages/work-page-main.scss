@@ -1,0 +1,77 @@
+@import '../../main.scss';
+
+.content {
+	font-family: $bodyfont;
+	padding: 5em;
+	display: inline-block;
+	float: left;
+	font-size: 1.5em;
+	font-weight: 400;
+	word-wrap: break-word;
+	text-align: justify;
+}
+
+.bold {
+	background-color: rgba(0,0,0,0);
+	color: $primary;
+	font-weight: 700;
+}
+
+.picture {
+	width: 100%;
+	text-align: center;
+	margin: 5vw 0;
+	margin: 5vw 0;
+}
+
+.picture-quote {
+	width: 100%;
+	text-align: center;
+	margin: 5vw 0;
+	margin: 5vw 0;
+	display: flex;
+	align-items: center;
+}
+
+.picture-image {
+	width: 80%;
+	filter: drop-shadow(0em 0em 0.5em rgba($primary, .75));
+}
+
+.picture-image-left {
+	width: 45%;
+	filter: drop-shadow(0em 0em 0.5em rgba($primary, .75));
+	float: left;
+	margin-left: 3vw;
+}
+
+.picture-caption {
+	font-size: .75em;
+	display: inline-block;
+	color: $bg-color;
+	font-weight: 700;
+	padding: .2em .5em;
+	border-radius: .2em;
+	max-width: 80%;
+	margin: 0;
+	margin-top: .5em;
+	background-color: $primary;
+}
+
+.quote {
+	font-size: 1.25em;
+	display: inline-block;
+	float: left;
+	background-color: rgba(0,0,0,0);
+	color: $primary;
+	line-height: 1.5em;
+	text-align: left;
+	max-width: 45%;
+	margin: 0;
+	margin-left: 1.5em;
+}
+
+hr {
+	border: .2vh solid $primary;
+	margin: 1em 0em;
+}

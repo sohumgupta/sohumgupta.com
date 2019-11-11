@@ -1,0 +1,51 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import '../main.scss';
+
+.footer {
+	width: 100%;
+	background-color: $primary;
+	color: $bg-color;
+	height: 10vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	
+	text-decoration: none;
+	font-family: $bodyfont;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 400;
+	letter-spacing: .25em;
+	color: black;
+}
+
+.fa {
+  padding: 0em;
+  font-size: 1.5em;
+  width: 2em;
+	height: 2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 0em .5em;
+	transition: all .25s ease;
+	line-height: 2em;
+}
+
+.footer-left {
+	grid-column: 1;
+	justify-self: start;
+	padding-left: 2em;
+}
+
+.footer-center {
+	grid-column: 2;
+}
+
+
+.footer-right {
+	grid-column: 3;
+	justify-self: end;
+	padding-right: 2em;
+	text-align: right;
+}
