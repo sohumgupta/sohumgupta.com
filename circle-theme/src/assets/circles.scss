@@ -15,3 +15,9 @@
 	position: fixed;
 	z-index: 0;
 }
+
+@media (orientation: portrait) {
+	#circle-1, #circle-2 {
+		display: none;
+	}
+}

@@ -1,6 +1,6 @@
 @import '../main.scss';
 
-#navbar {
+.navbar {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -23,18 +23,17 @@ ul {
 ul li {
 	display: inline-block;
 	margin: 0em;
-	padding: 3vh 4vh;
+	padding: 3vh 2vw;
 	float: left;
 	transition: all .5s ease;
 	border-bottom: .3vh solid rgba(0,0,0,0);
 }
 
 li a {
-	font-size: 3vh;
+	font-size: calc((1.5vw + 3vh)/2);
 	text-decoration: none;
 	font-family: $mainfont;
 	text-transform: uppercase;
-	font-size: 1.5em;
 	font-weight: 400;
 	letter-spacing: .25em;
 	color: black;
@@ -49,8 +48,26 @@ li a {
 	font-weight: 700;
 }
 
-#navbar-right {
+.navbar-right {
 	float: right;
 	padding: 0;
 	margin: 0;
+}
+
+@media (orientation: portrait) {
+	.name {
+		display: none;
+	}
+	
+	ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-content: center;
+		justify-content: center;
+	}
+	
+	.navbar-right {
+		margin: 0 auto;
+		grid-column: 1;
+	}
 }

@@ -1,5 +1,9 @@
 @import '../main.scss';
 
+body {
+	overflow-x: hidden;
+}
+
 .about-image-wrapper {
 	height: 80vh;
 	width: 50vw;
@@ -22,40 +26,44 @@
 .about-image-center {
 	height: 100%;
 	width: 100%;
-	display:flex;
-	align-items:center;
-	justify-content:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0;
 }
 
 .about-content {
-	height: 80vh;
+	height: 70vh;
 	width: 50vw;
 	margin: 0;
 	float: left;
-	display: inline-block;
 	margin-top: 10vh;
+	box-sizing: border-box;
+	overflow-y: visible;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding: 0;
 }
 
 .about-text {
-	padding: 2.5em;
+	box-sizing: border-box;
 	text-align: justify;
-	padding-right: 5em;
-	padding-left: 1vw;
-	font-size: 1.25em;
-	padding-top: 0em;
+	width: 90%;
+	font-size: 1.5vw;
+	margin-top: 0;
+	padding-top: 0;
 	font-family: $bodyfont;
-	letter-spacing: 0em;
 	color: black;
 	margin: 0;
 	word-wrap: break-word;
 	hyphens: auto;
+	overflow-y: visible;
 }
 
 .about-title-text {
-	margin-bottom: .5vw;
-	padding: .75vw 1vw 0em 1vw;
-	padding-left: 1vw;
+	margin-bottom: 0;
 	font-family: $mainfont;
 	font-size: 3vw;
   font-weight: 900;
@@ -67,4 +75,50 @@
 	background-color: rgba(0,0,0,0);
 	color: $primary;
 	font-weight: 700;
+}
+
+@media (orientation: portrait) {
+	.about {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		align-content:center;
+		justify-content: center;
+	}
+	
+	.about-image-wrapper {
+		grid-row: 1;
+		width: 100vw;
+		height: 40vh;
+	}
+	
+	.about-image {
+		max-width: 90%;
+		max-height: 80%;
+	}
+	
+	.about-content {
+		margin-top: 0;
+		padding-right: 10vw;
+		padding-left: 10vw;
+		box-sizing: border-box;
+		grid-row: 2;
+		width: 100vw;
+		height: auto;
+		overflow-y: scroll;
+		margin-bottom: 5vh;
+	}
+	
+	.about-text {
+		font-size: 3vw;
+		padding-right: 5vw;
+		padding-left: 5vw;
+		overflow-y: scroll;
+	}
+	
+	.about-title-text {
+		font-size: 5vw;
+		padding-right: 5vw;
+		padding-left: 5vw;
+	}
+	
 }

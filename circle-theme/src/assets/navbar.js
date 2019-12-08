@@ -22,7 +22,7 @@ class Navlink extends React.Component {
 class Navname extends React.Component {
 	render() {
 		return (
-			<li><a>{this.props.text}</a></li>
+			<li className="name"><a>{this.props.text}</a></li>
 		);
 	}
 }
@@ -52,10 +52,10 @@ class Navbar extends React.Component {
 		}
 		
 		return (
-			<div id="navbar" style={navstyle}>
+			<div className="navbar" style={navstyle}>
 				<ul>
 					<Navname text="Sohum Gupta"></Navname>
-					<div id="navbar-right">
+					<div className="navbar-right">
 						<Navlink active={(this.props.active === "work") ? "active" : ""} url="/work" text="Work"></Navlink>
 						<Navlink active={(this.props.active === "about") ? "active" : ""} url="/about" text="About"></Navlink>
 						<li className="link">

@@ -20,7 +20,6 @@ class LandingPage extends React.Component {
 
   _onMouseMove(e) {
     this.setState({ x: e.screenX, y: e.screenY });
-		//console.log("y pos: " + screenY + ", x pos: " + screenX);
   }
 	
 	render() {

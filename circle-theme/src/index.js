@@ -14,6 +14,12 @@ import {
   useParams
 } from "react-router-dom";
 
+import {
+	CSSTransition,
+	TransitionGroup
+} from 'react-transition-group';
+
+import ErrorPage from './pages/404-page.js';
 import LandingPage from './pages/landing-page.js';
 import WorkPage from './pages/work-page.js';
 import AboutPage from './pages/about-page.js';
@@ -27,20 +33,31 @@ import ShellPage from './pages/work-pages/shell-page.js';
 function App() {
 	return (
 		<div className="app">
-			<Switch>
+		
+			<Route render={({location}) =>  (
+				<TransitionGroup>
+				<CSSTransition 
+					key={location.key}
+					timeout={800} 
+					classNames="fade">
 
-				<Route exact path="/" component={LandingPage}/>
-				<Route exact path="/about" component={AboutPage} />
-				<Route exact path="/work" component={WorkPage} />
-				<Route exact path="/work/mixr" component={MixrPage} />
-				<Route exact path="/work/aroma" component={AromaPage} />
-				<Route exact path="/work/shell" component={ShellPage} />
-				<Route exact path="/work/photography" component={PhotographyPage} />
-				<Route exact path="/work/senioredition" component={SeniorEditionPage} />
-				<Route exact path="/work/collegeboard" component={RedesignPage} />
-				<Route exact component={WorkPage}/>
+					<Switch location={location}>
+						<Route exact path="/" component={LandingPage}/>
+						<Route exact path="/about" component={AboutPage} />
+						<Route exact path="/work" component={WorkPage} />
+						<Route exact path="/work/mixr" component={MixrPage} />
+						<Route exact path="/work/aroma" component={AromaPage} />
+						<Route exact path="/work/shell" component={ShellPage} />
+						<Route exact path="/work/photography" component={PhotographyPage} />
+						<Route exact path="/work/senioredition" component={SeniorEditionPage} />
+						<Route exact path="/work/collegeboard" component={RedesignPage} />
+						<Route exact component={ErrorPage}/>
+					</Switch>
 
-			</Switch>
+				</CSSTransition>
+				</TransitionGroup>
+			)}/>
+		
 		</div>
 	);
 }

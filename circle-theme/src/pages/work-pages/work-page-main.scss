@@ -2,10 +2,10 @@
 
 .content {
 	font-family: $bodyfont;
-	padding: 5em;
+	padding: 8vw;
 	display: inline-block;
 	float: left;
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	font-weight: 400;
 	word-wrap: break-word;
 	text-align: justify;
@@ -74,4 +74,10 @@
 hr {
 	border: .2vh solid $primary;
 	margin: 1em 0em;
+}
+
+@media (orientation: portrait) {
+	.content {
+		font-size: 1.5vh;
+	}
 }

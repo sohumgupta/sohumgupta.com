@@ -4,6 +4,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: $bg-color;
+	overflow-x: hidden;
 }
 
 @media (orientation: landscape) {
@@ -22,7 +23,7 @@ body {
 @media (orientation: portrait) {
 	#work-container {
 		height: 250vh;
-		padding: 20vh 8vw 10vh 8vw;
+		padding: 15vh 8vw 5vh 8vw;
 		box-sizing: border-box;
 		display: grid;
 		grid-gap: 5vw 5vw;

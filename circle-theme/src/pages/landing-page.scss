@@ -1,5 +1,9 @@
 @import '../main.scss';
 
+body {
+	overflow-x: hidden;
+}
+
 #landing-page-text {
 	text-transform: uppercase;
 	font-size: 5vh;

@@ -14,7 +14,6 @@
 	text-decoration: none;
 	font-family: $bodyfont;
 	text-transform: uppercase;
-	font-size: 1em;
 	font-weight: 400;
 	letter-spacing: .25em;
 	color: black;
@@ -22,12 +21,10 @@
 
 .fa {
   padding: 0em;
-  font-size: 1.5em;
-  width: 2em;
-	height: 2em;
+  font-size: calc((1.5vw + 2vh)/2);
   text-align: center;
   text-decoration: none;
-  margin: 0em .5em;
+  margin: 0em calc((1.5vw + 2vh)/2);
 	transition: all .25s ease;
 	line-height: 2em;
 }
@@ -35,17 +32,31 @@
 .footer-left {
 	grid-column: 1;
 	justify-self: start;
-	padding-left: 2em;
+	padding-left: 2vw;
+	z-index: 10;
+	font-size: 1vw;
 }
 
 .footer-center {
 	grid-column: 2;
+	z-index: 10;
 }
-
 
 .footer-right {
 	grid-column: 3;
 	justify-self: end;
-	padding-right: 2em;
+	padding-right: 2vw;
 	text-align: right;
+	z-index: 10;
+	font-size: 1vw;
+}
+
+@media (orientation: portrait) {
+	.footer-left, .footer-right {
+		display: none;
+	}
+	
+	.footer-center {
+		grid-column: 1/4;
+	}
 }

@@ -17,7 +17,7 @@
 }
 
 code {
-	font-size: 1em;
+	font-size: 1.5vw;
 	background-color: $bg-color;
 	color: #777;
 	padding: 0em .2em;
@@ -31,7 +31,7 @@ code {
 }
 
 .work-name {
-	font-size: 3em;
+	font-size: 4vw;
   font-weight: 900;
   letter-spacing: .25em;
   text-transform: uppercase;
@@ -41,7 +41,7 @@ code {
 }
 
 .work-descrip {
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	margin: 0;
 	display: inline-block;
 	float: left;
@@ -68,5 +68,23 @@ code {
 	grid-row: 2;
 	align-self: end;
 	justify-self: start;
+}
+
+@media (orientation: portrait) {
+	.work-header {
+		height: 20vh;
+	}
+	
+	.work-name {
+		font-size: 5vw;
+	}
+	
+	.work-descrip {
+		font-size: 2vw;
+	}
+	
+	code {
+		font-size: 2vw;
+	}
 }
 
