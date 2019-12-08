@@ -35,7 +35,7 @@ class RedesignPage extends React.Component {
 				<div id="redesign-page">
 					<WorkHeader image={RedesignHeader} name="Collegeboard Redesign" descrip="Created for CSCI 1300, Fall 2019" technologies={["Adobe XD", "HTML/CSS"]}/>
 					<div className="content">
-						There is one website that every high schooler knows and hates: the CollegeBoard website. From signing up for SAT tests and AP tests to finding information about col-leges across the country, the CollegeBoard website is necessary for some of the most important tasks that upperclassmen in high school need to complete. However, every high schooler quickly realizes that there is one flaw with this omnipotent CollegeBoard website: <mark className="bold">it’s badly designed.</mark> I decided to take this into my own hands and tried to redesign it, utilizing wireframes, a visual redesign, and a responsive website.
+						There is one website that every high schooler knows and hates: the CollegeBoard website. From signing up for SAT tests and AP tests to finding information about colleges across the country, the CollegeBoard website is necessary for some of the most important tasks that upperclassmen in high school need to complete. However, every high schooler quickly realizes that there is one flaw with this omnipotent CollegeBoard website: <mark className="bold">it’s badly designed.</mark> I decided to take this into my own hands and tried to redesign it, utilizing wireframes, a visual redesign, and a responsive website.
 						<br/><br/>
 						For reference, here's what the CollegeBoard website looks like right now:
 			
