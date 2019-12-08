@@ -51,7 +51,7 @@ class RedesignPage extends React.Component {
 							<p className="picture-caption">One of my wireframes (for the SAT Signup Page).</p>
 						</div>
 			
-						I then decided to make a visual overhaul of the website, creating a mockup of what a finished product of the SAT Signup page could look like. In my visual redesign, the biggest thing I tried to do was to create a visual hierarchy to inform users of the most important parts of the page. To do this, I used a blue accent color – the same blue that the website currently uses – to highlight the actionable tasks on the page (i.e. sign in, sign up for SATs, and see more buttons), and tried to use con-trasting type sizes to make it clear what the purpose of different sections was. I also made the font size bigger than it originally was and tried to increase contrast between text and background elements in order to improve readability.
+						I then decided to make a visual overhaul of the website, creating a mockup of what a finished product of the SAT Signup page could look like. In my visual redesign, the biggest thing I tried to do was to create a visual hierarchy to inform users of the most important parts of the page. To do this, I used a blue accent color – the same blue that the website currently uses – to highlight the actionable tasks on the page (i.e. sign in, sign up for SATs, and see more buttons), and tried to use contrasting type sizes to make it clear what the purpose of different sections was. I also made the font size bigger than it originally was and tried to increase contrast between text and background elements in order to improve readability.
 						
 						<div className="picture">
 							<img src={VisualRedesign} className="picture-image"/>
