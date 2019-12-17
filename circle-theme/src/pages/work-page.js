@@ -12,6 +12,7 @@ import SeniorEdition from '../images/main/graphicdesign.png';
 import Mixr from '../images/main/mixrhome.png';
 import Aroma from '../images/main/aromahome.png';
 import Shell from '../images/main/shell.png';
+import Stoic from '../images/main/stoic.png';
 import Photography from '../images/main/photography.png';
 import Collegeboard from '../images/main/collegeboard.png';
 
@@ -42,6 +43,7 @@ class WorkPage extends React.Component {
 				<div id="work-page" onMouseMove={this._onMouseMove.bind(this)}>
 					<Navbar opacity={0}></Navbar>
 					<div id="work-container">
+						<WorkCard name="Stoic Design" image={Stoic} page="/work/stoic" />
 						<WorkCard name="MIXR" image={Mixr} page="/work/mixr" />
 						<WorkCard name="Shell" image={Shell} page="/work/shell" />
 						<WorkCard name="Aroma" image={Aroma} page="/work/aroma" />

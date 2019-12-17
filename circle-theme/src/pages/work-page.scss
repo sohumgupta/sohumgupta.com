@@ -9,12 +9,12 @@ body {
 
 @media (orientation: landscape) {
 	#work-container {
-		height: 160vh;
+		height: 220vh;
 		padding: 20vh 8em 10vh 8em;
 		box-sizing: border-box;
 		display: grid;
 		grid-gap: 5vw 5vw;
-		grid-template: 1fr 1fr 1fr / 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		width: 100%;
 		background-color: $bg-color;
 	}

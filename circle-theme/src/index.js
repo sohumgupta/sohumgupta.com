@@ -29,6 +29,7 @@ import AromaPage from './pages/work-pages/aroma-page.js';
 import PhotographyPage from './pages/work-pages/photography-page.js';
 import RedesignPage from './pages/work-pages/redesign-page.js';
 import ShellPage from './pages/work-pages/shell-page.js';
+import StoicPage from './pages/work-pages/stoic-page.js';
 
 function App() {
 	return (
@@ -48,6 +49,7 @@ function App() {
 						<Route exact path="/work/mixr" component={MixrPage} />
 						<Route exact path="/work/aroma" component={AromaPage} />
 						<Route exact path="/work/shell" component={ShellPage} />
+						<Route exact path="/work/stoic" component={StoicPage} />
 						<Route exact path="/work/photography" component={PhotographyPage} />
 						<Route exact path="/work/senioredition" component={SeniorEditionPage} />
 						<Route exact path="/work/collegeboard" component={RedesignPage} />
