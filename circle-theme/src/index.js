@@ -31,6 +31,8 @@ import RedesignPage from './pages/work-pages/redesign-page.js';
 import ShellPage from './pages/work-pages/shell-page.js';
 import StoicPage from './pages/work-pages/stoic-page.js';
 
+import ResumePage from './pages/resume-page.js';
+
 function App() {
 	return (
 		<div className="app">
@@ -53,6 +55,9 @@ function App() {
 						<Route exact path="/work/photography" component={PhotographyPage} />
 						<Route exact path="/work/senioredition" component={SeniorEditionPage} />
 						<Route exact path="/work/collegeboard" component={RedesignPage} />
+		
+						<Route exact path="/resume" component={ResumePage} />
+		
 						<Route exact component={ErrorPage}/>
 					</Switch>
 

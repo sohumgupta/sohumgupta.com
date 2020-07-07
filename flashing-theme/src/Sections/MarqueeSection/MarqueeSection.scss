@@ -1,0 +1,57 @@
+@import '../../Main.scss';
+
+.marquee-wrapper {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1em 0;
+
+	--offset: 0vw;
+    --move-initial: calc(-12.5% + var(--offset));
+	--move-final: calc(-25% + var(--offset));
+	
+	.backwards { 
+		animation-direction: reverse !important;
+		animation-duration: 5s !important;
+	}
+
+	.marquee-line {
+		width: fit-content;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: flex-start;
+
+		animation: marquee 5s linear infinite;
+
+		&:hover .marquee-text {  font-style: italic; }
+
+		.marquee-text {
+			font-family: $main-font;
+			font-size: 2em;
+			-webkit-text-fill-color: none;
+			-webkit-text-stroke-width: .05em;
+			-webkit-text-stroke-color: $accent-color;
+			color: rgba(0,0,0,0);
+			text-transform: uppercase;
+			font-weight: 700;
+			margin: 0 0.5em;
+			white-space: pre;
+
+			&:hover { color: $accent-color; }
+		}
+
+		.upside-down {
+			transform: rotate(-180deg)
+		}
+
+		@keyframes marquee {
+			0% { transform: translate3d(var(--move-initial), 0, 0); }
+			100% { transform: translate3d(var(--move-final), 0, 0); }
+		}
+	}
+}

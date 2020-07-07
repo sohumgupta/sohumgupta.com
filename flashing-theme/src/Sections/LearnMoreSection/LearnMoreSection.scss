@@ -1,0 +1,39 @@
+@import '../../Main.scss';
+
+.learn-more-wrapper {
+	height: 10vh;
+	width: 100%;
+	background: $accent-color;
+
+	.learn-more {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		user-select: none;
+
+		.learn-more-text {
+			font-family: $main-font;
+			color: black;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			margin-left: 1em;
+			margin-right: 0em;
+		}
+
+		.learn-more-icon {
+			font-size: 3em;
+			animation: wobble;
+			animation-duration: 0.5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+
+		@keyframes wobble {
+			0% { transform: translate(0, -.1em) scaleX(0.5) }
+			100% { transform: translate(0, 0.2em) scaleX(0.5) }
+		}
+	}
+}

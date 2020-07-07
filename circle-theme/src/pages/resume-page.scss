@@ -1,0 +1,80 @@
+@import '../main.scss';
+
+.resume {
+	grid-gap: 3vw 1vw;
+	width: 90vw;
+	height: 200vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		"header header"
+		"education experience"
+		"education experience"
+		"skills experience"
+		"skills activities"
+		"courses activities"
+		"courses activities"
+		"interests projects"
+		"interests projects"
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	font-family: $mainfont;
+	color: black;
+}
+
+.grid-area {
+	border: 0em solid black;
+	overflow-y: scroll;
+}
+
+.title {
+	font-family: $bodyfont;
+	color: black;
+	letter-spacing: 0em;
+	font-size: 1.5em;
+	font-weight: 900;
+	margin: 0;
+	padding-bottom: .1em;
+	border-bottom: .75vw solid #eee;
+}
+
+.header-left {
+	white-space: nowrap;
+	margin-right: 1em;
+	font-family: $bodyfont;
+	color: black;
+	letter-spacing: 0em;
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	border-bottom: .75vw solid #eee;
+	justify-items: start;
+	align-items: center;
+}
+
+.education {grid-area: education;}
+.experience {grid-area: experience;}
+.skills {grid-area: skills;}
+.activities {grid-area: activities;}
+.courses {grid-area: courses;}
+.interests {grid-area: interests;}
+.projects {grid-area: projects;}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}

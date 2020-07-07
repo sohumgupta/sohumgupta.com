@@ -59,7 +59,7 @@ class Navbar extends React.Component {
 						<Navlink active={(this.props.active === "work") ? "active" : ""} url="/work" text="Work"></Navlink>
 						<Navlink active={(this.props.active === "about") ? "active" : ""} url="/about" text="About"></Navlink>
 						<li className="link">
-							<a className={(this.props.active === "resume") ? "active" : ""} target="_blank" href="https://drive.google.com/file/d/1YXmB6IsWQ9FWrOR_FwUVmgU6gsC8a6lK/view?usp=sharing">
+							<a className={(this.props.active === "resume") ? "active" : ""} target="_blank" href="https://drive.google.com/file/d/1gZrbeegvSjv8l7BMKPDYiq5diuID4Ob1/view?usp=sharing">
 								Résumé
 							</a>
 						</li>

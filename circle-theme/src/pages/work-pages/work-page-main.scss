@@ -2,7 +2,7 @@
 
 .content {
 	font-family: $bodyfont;
-	padding: 8vw;
+	padding: 8vw 20vw;
 	display: inline-block;
 	float: left;
 	font-size: 1.5vw;
@@ -86,5 +86,6 @@ hr {
 @media (orientation: portrait) {
 	.content {
 		font-size: 1.5vh;
+		padding: 8vw 12vw;
 	}
 }

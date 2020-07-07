@@ -1,5 +1,52 @@
 @import '../main.scss';
 
+.filter-button {
+  position: relative;
+	padding: 2vh;
+  transition: all .2s ease;
+	background: rgba($primary, 1);
+	outline: none;
+	border-radius: 50em;
+	border: .2em solid rgba($primary,1);
+	font-weight: 900;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	margin-right: 2em;
+	margin-top: 1em;
+	&:hover {
+		border: .2em solid rgba(black,.5);
+	}
+	&:active {
+		background: black;
+		color: $bg-color;
+		border: .2em solid rgba(black,1);
+	}
+}
+
+.pushed {
+	background: black;
+	color: $bg-color;
+	border: .2em solid rgba(black,1);
+}
+
+#filters {
+	position: relative;
+	width: 100%;
+	display: block;
+	height: 10vh;
+	padding: 10vh 8em 0vh 8em;
+	box-sizing: border-box;
+	z-index: 10;
+}
+
+h1 {
+	font-weight: 900;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	margin-top: 2em;
+	font-size: 1.25em;
+}
+
 body {
 	height: 100vh;
 	width: 100vw;
@@ -22,12 +69,12 @@ body {
 
 @media (orientation: portrait) {
 	#work-container {
-		height: 250vh;
+		height: 280vh;
 		padding: 15vh 8vw 5vh 8vw;
 		box-sizing: border-box;
 		display: grid;
 		grid-gap: 5vw 5vw;
-		grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
+		grid-template-columns: 1fr;
 		width: 100%;
 		background-color: $bg-color;
 	}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+#root, .body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'LagunaCreek';
+	src: local('LagunaCreek'), url('./Assets/Fonts/LagunaCreek.otf') format('opentype');
+}
+
+$dark-color: #222222;
+$accent-color: #D8195E;
+$display-font: 'LagunaCreek';
+$main-font: 'Montserrat', sans-serif;

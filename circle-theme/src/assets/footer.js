@@ -5,7 +5,7 @@ class Footer extends React.Component {
 	render() {
 		return (
 			<div className="footer">
-				<div className="footer-left">Copyright &copy; 2019, Sohum Gupta</div>
+				<div className="footer-left">Copyright &copy; 2020, Sohum Gupta</div>
 				<div className="footer-center">
 					<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sohum_gupta@brown.com" target="_blank" className="fa fa-envelope-o"></a>
 					<a href="https://www.linkedin.com/in/sohum-gupta/" target="_blank" className="fa fa-linkedin"></a>
