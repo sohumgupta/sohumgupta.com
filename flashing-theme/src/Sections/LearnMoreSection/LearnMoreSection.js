@@ -7,7 +7,7 @@ class LearnMoreSection extends React.Component {
 	render() {
 		return (
 			<div className="learn-more-wrapper">
-				<div className="learn-more">
+				<div className="learn-more" onClick={this.props.onClick}>
 					<p className="learn-more-text">Learn More</p>
 					<p className="learn-more-icon"><MdArrowDropDown/></p>
 				</div>

@@ -7,10 +7,12 @@
 
 	.learn-more {
 		height: 100%;
+		width: fit-content;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		user-select: none;
+		cursor: pointer;
 
 		.learn-more-text {
 			font-family: $main-font;
@@ -20,7 +22,6 @@
 			font-size: 1.5em;
 			margin-left: 1em;
 			margin-right: 0em;
-			cursor: pointer;
 		}
 
 		.learn-more-icon {
@@ -31,7 +32,6 @@
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
-			cursor: pointer;
 		}
 
 		@keyframes wobble {
