@@ -1,0 +1,33 @@
+@import '../../Main.scss';
+
+.social-icon-wrapper {
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em 0;
+	position: relative;
+	cursor: pointer;
+	z-index: 10;
+	
+	* {
+		font-size: 2em;
+		line-height: 0em;
+		color: $dark-color;
+	}
+
+	&:hover .social-icon-circle { opacity: 1 }
+
+	.social-icon-circle {
+		position: absolute;
+		width: 300%;
+		height: 300%;
+		top: 0%;
+		opacity: 0;
+
+		svg {
+			fill: $light-color;
+		}
+	}
+}

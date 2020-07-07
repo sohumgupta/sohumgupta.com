@@ -34,13 +34,11 @@
 		}
 
 		.landing-text {
+			@include outline;
 			-webkit-user-select: none;
 			font-size: 5.5em;
 			font-family: $display-font;
 			color: rgba(0,0,0,0);
-			-webkit-text-fill-color: none;
-			-webkit-text-stroke-width: .01em;
-			-webkit-text-stroke-color: $accent-color;
 			animation: blink;
 			animation-duration: $blink-time;
 			animation-iteration-count: infinite;
@@ -66,7 +64,7 @@
 				opacity: 0;
 				
 				svg {
-					fill: white;
+					fill: $light-color;
 				}
 			}
 		}

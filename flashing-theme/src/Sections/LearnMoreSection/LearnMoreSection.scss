@@ -14,21 +14,24 @@
 
 		.learn-more-text {
 			font-family: $main-font;
-			color: black;
+			color: $dark-color;
 			font-weight: 700;
 			text-transform: uppercase;
 			font-size: 1.5em;
 			margin-left: 1em;
 			margin-right: 0em;
+			cursor: pointer;
 		}
 
 		.learn-more-icon {
 			font-size: 3em;
+			color: $dark-color;
 			animation: wobble;
 			animation-duration: 0.5s;
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
+			cursor: pointer;
 		}
 
 		@keyframes wobble {

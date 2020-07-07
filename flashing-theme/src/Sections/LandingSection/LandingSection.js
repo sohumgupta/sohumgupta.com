@@ -19,8 +19,7 @@ class LandingSection extends React.Component {
 		}
 	}
 
-	randomizeImages() {
-		console.log("hovering!!!")
+	randomizeLines() {
 		var index1 = Math.floor(Math.random() * lines.length);
 		var index2 = Math.floor(Math.random() * lines.length);
   		this.setState({line1: lines[index1], line2: lines[index2]})
@@ -29,7 +28,7 @@ class LandingSection extends React.Component {
 	render() {
 		return (
 			<div className="landing-wrapper">
-				<div className="landing-text-wrapper" onMouseEnter={this.randomizeImages.bind(this)}>
+				<div className="landing-text-wrapper" onMouseEnter={this.randomizeLines.bind(this)}>
 					<div className="landing-text">
 						Sohum Gupta
 						<p className="landing-text-strikethrough">{this.state.line1}</p>

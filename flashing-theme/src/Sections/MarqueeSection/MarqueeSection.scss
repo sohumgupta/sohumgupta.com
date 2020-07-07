@@ -10,9 +10,8 @@
 	justify-content: space-between;
 	padding: 1em 0;
 
-	--offset: 0vw;
-    --move-initial: calc(-12.5% + var(--offset));
-	--move-final: calc(-25% + var(--offset));
+    $move-initial: calc(-12.5%);
+	$move-final: calc(-25%);
 	
 	.backwards { 
 		animation-direction: reverse !important;
@@ -25,17 +24,16 @@
 		position: relative;
 		align-items: center;
 		justify-content: flex-start;
+		overflow: hidden;
 
 		animation: marquee 5s linear infinite;
 
 		&:hover .marquee-text {  font-style: italic; }
 
 		.marquee-text {
+			@include outline;
 			font-family: $main-font;
 			font-size: 2em;
-			-webkit-text-fill-color: none;
-			-webkit-text-stroke-width: .05em;
-			-webkit-text-stroke-color: $accent-color;
 			color: rgba(0,0,0,0);
 			text-transform: uppercase;
 			font-weight: 700;
@@ -50,8 +48,8 @@
 		}
 
 		@keyframes marquee {
-			0% { transform: translate3d(var(--move-initial), 0, 0); }
-			100% { transform: translate3d(var(--move-final), 0, 0); }
+			0% { transform: translate($move-initial, 0); }
+			100% { transform: translate($move-final, 0); }
 		}
 	}
 }

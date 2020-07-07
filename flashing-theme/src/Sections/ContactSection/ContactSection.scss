@@ -1,0 +1,18 @@
+@import '../../Main.scss';
+
+.contact-wrapper {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $accent-color;
+	padding: 1em;
+
+	.contact-socials {
+		width: min(60vh, 80vw);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
