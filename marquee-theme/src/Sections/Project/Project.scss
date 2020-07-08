@@ -1,0 +1,78 @@
+@import '../../Main.scss';
+
+.project-wrapper {
+	grid-column: auto;
+	grid-row: auto;
+	width: 100%;
+	height: 30vh;
+	position: relative;
+	cursor: pointer;
+
+	.project-left-bracket, .project-right-bracket {
+		position: absolute;
+		height: 100%;
+		width: content-fit;
+		top: 0;
+		opacity: 0;
+
+		svg { height: 100%; width: auto; fill: $light-color;}
+	}
+
+	.project-left-bracket { left: 0; }
+	.project-right-bracket { right: 0; transform: rotate(180deg); }
+
+	&:hover {
+		padding: 3vh;
+		.project-left-bracket, .project-right-bracket { opacity: 1}
+		.project-picture .project-title { font-size: 4vh; @include outline($light-color); color: rgba(0,0,0,0); }
+	}
+
+	.project-picture {
+		width: 100%;
+		height: 100%;
+		background: grey;
+
+		.project-title {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-start;
+			width: 100%;
+			height: 100%;
+			padding: 1vh 2vh;
+			background: rgba(0,0,0,.2);
+
+			font-size: 5vh;
+			font-family: $display-font;
+			color: $light-color;
+		}
+	}
+}
+
+.project-popup-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,.5);
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.project-popup {
+		margin: 0;
+		width: calc(100% - 50vh);
+		height: fit-content;
+		max-height: calc(100% - 20vh);
+		margin: 0;
+		padding: 5vh;
+		background: $accent-color;
+	}
+}
+
+.wrapper-resize {
+	.project-popup {
+		width: calc(100% - 20vh);
+	}
+}

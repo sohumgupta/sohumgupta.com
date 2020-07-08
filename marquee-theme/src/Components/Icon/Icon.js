@@ -19,17 +19,14 @@ class Icon extends React.Component {
 		var rot = (Math.random() * 90) - 45;
   		this.setState({circle: circles[index], circleRot: rot})
 	}
-
-	openLink() { window.open(this.props.url); }
-
 	render() {
 		const circleStyle = { transform: 'rotate(' + this.state.circleRot + 'deg)', transformOrigin: 'center' }
 		return (
-			<div className="icon-wrapper" onMouseEnter={this.randomizeCircle.bind(this)} onClick={() => this.openLink()}>
+			<div className="icon-wrapper" onMouseEnter={this.randomizeCircle.bind(this)}>
 				{this.props.children}
-				<div className="icon-circle" style={circleStyle}>
+				<a href={this.props.url} target="_blank" rel="noopener noreferrer" className="icon-circle" style={circleStyle}>
 					{this.state.circle}
-				</div>
+				</a>
 			</div>
 		)
 	}

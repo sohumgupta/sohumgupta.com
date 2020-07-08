@@ -8,7 +8,7 @@ import ContactSection from './Sections/ContactSection/ContactSection';
 import AboutSection from './Sections/AboutSection/AboutSection';
 import SectionHeader from './Components/SectionHeader/SectionHeader';
 import ExperienceSection from './Sections/ExperienceSection/ExperienceSection';
-import ProjectsSection from './Sections/ProjectSection/ProjectSection';
+import ProjectsSection from './Sections/ProjectsSection/ProjectsSection';
 
 import experiences from './Info/Experience';
 import projects from './Info/Projects';
@@ -44,16 +44,6 @@ class Main extends React.Component {
 				descriptions={e.descriptions}/>
 		);
 
-		const renderedProjects = projects.map((p) => 
-			<ProjectsSection title={p.title} 
-				organization={p.organization} 
-				date={p.date} 
-				resize={resize}
-				description={p.description}
-				technologies={p.technologies}
-				icons={p.icons}/>
-		);
-
 		return (
 			<div className="body">
 				<MarqueeSection resize={resize}/>
@@ -64,7 +54,7 @@ class Main extends React.Component {
 				<SectionHeader section="Experience" color="dark"/>
 				{renderedExperiences}
 				<SectionHeader section="Projects" color="accent"/>
-				{renderedProjects}
+				<ProjectsSection resize={resize} projects={projects}/>
 				<ContactSection resize={resize}/>
 			</div>
 		)

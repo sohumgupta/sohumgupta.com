@@ -1,0 +1,17 @@
+@import '../../Main.scss';
+
+.projects-wrapper {
+	display: grid;
+	padding: 0 calc((100% - 105vh)/2);
+	padding-bottom: 5vh;
+	gap: 5vw;
+	grid-template-columns: 50vh 50vh;
+	grid-template-rows: auto;
+	background: $accent-color;
+}
+
+.resize {
+	grid-template-columns: 50vh;
+	padding: 0 calc((100vw - 50vh)/2);
+	padding-bottom: 5vh;
+}

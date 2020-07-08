@@ -12,6 +12,17 @@ const projects = [
 			{ icon: <FaGithub/>, url: "" },
 			{ icon: <FaGoogleDrive/>, url: "" },
 		]
+	},
+	{
+		organization: "Computer Vision",
+		title: "Optical Music Recognition",
+		date: "May 2020 ",
+		description: "This was cool project i did!!!",
+		technologies: ["Python", "Tensorflow"],
+		icons: [
+			{ icon: <FaGithub/>, url: "" },
+			{ icon: <FaGoogleDrive/>, url: "" },
+		]
 	}
 ]
 
