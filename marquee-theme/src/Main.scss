@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @import 'Themes/Strawberry.scss';
-//@import 'Themes/MintChocoChip.scss';
-@import 'Themes/Electro.scss';
-@import 'Themes/Lavender.scss';
+// @import 'Themes/MintChocoChip.scss';
+// @import 'Themes/Electro.scss';
+// @import 'Themes/Lavender.scss';
 
 @font-face {
-	font-family: 'LagunaCreek';
+	font-family: 'Laguna Creek';
 	src: local('LagunaCreek'), url('./Assets/Fonts/LagunaCreek.otf') format('opentype');
 }
 
-$display-font: 'LagunaCreek';
-$main-font: 'Roboto Mono', sans-serif;
+@font-face {
+	font-family: 'Apercu Mono';
+	src: local('Apercu Mono'), url('./Assets/Fonts/ApercuMono.ttf') format('truetype');
+}
+
+$display-font: 'Laguna Creek';
+$main-font: 'Apercu Mono', sans-serif;
 
 #root, .body {
 	width: 100%;
