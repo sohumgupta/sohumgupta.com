@@ -2,16 +2,13 @@
 
 .projects-wrapper {
 	display: grid;
-	padding: 0 calc((100% - 105vh)/2);
-	padding-bottom: 5vh;
-	gap: 5vw;
-	grid-template-columns: 50vh 50vh;
-	grid-template-rows: auto;
+	padding: 0 calc((100% - 120vh - 3vw)/2);
 	background: $accent-color;
+	position: relative;
 }
 
 .resize {
-	grid-template-columns: 50vh;
-	padding: 0 calc((100vw - 50vh)/2);
+	grid-template-columns: 60vh;
+	padding: 0 calc((100vw - 60vh)/2);
 	padding-bottom: 5vh;
 }

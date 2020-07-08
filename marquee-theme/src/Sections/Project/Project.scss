@@ -1,36 +1,39 @@
 @import '../../Main.scss';
 
 .project-wrapper {
-	grid-column: auto;
-	grid-row: auto;
-	width: 100%;
-	height: 30vh;
-	position: relative;
+	width: 60vh;
+	height: 35vh;
 	cursor: pointer;
-
-	.project-left-bracket, .project-right-bracket {
-		position: absolute;
-		height: 100%;
-		width: content-fit;
-		top: 0;
-		opacity: 0;
-
-		svg { height: 100%; width: auto; fill: $light-color;}
+	padding: 3vh;
+	transition: all 1s ease;
+	position: absolute;
+	
+	&:nth-child(even) {
+		right: calc((100% - 120vh - 3vw)/2);
 	}
 
-	.project-left-bracket { left: 0; }
-	.project-right-bracket { right: 0; transform: rotate(180deg); }
+	&:nth-child(odd) {
+		left: calc((100% - 120vh - 3vw)/2);
+	}
 
 	&:hover {
-		padding: 3vh;
-		.project-left-bracket, .project-right-bracket { opacity: 1}
-		.project-picture .project-title { font-size: 4vh; @include outline($light-color); color: rgba(0,0,0,0); }
+		width: calc(120vh + 3vw);
+		z-index: 100;
+		transition: all 1s ease;
+
+		.project-picture .project-title { 
+			@include outline($light-color); 
+			color: rgba(0,0,0,0); 
+			backdrop-filter: blur(.5vh);
+		}
+		
 	}
 
 	.project-picture {
 		width: 100%;
 		height: 100%;
-		background: grey;
+		background-position: center;
+		background-size: cover;
 
 		.project-title {
 			display: flex;
@@ -39,7 +42,7 @@
 			width: 100%;
 			height: 100%;
 			padding: 1vh 2vh;
-			background: rgba(0,0,0,.2);
+			background: rgba($dark-color,.5);
 
 			font-size: 5vh;
 			font-family: $display-font;
@@ -66,8 +69,36 @@
 		height: fit-content;
 		max-height: calc(100% - 20vh);
 		margin: 0;
-		padding: 5vh;
-		background: $accent-color;
+		padding: 5vh min(10%, 50vh);
+		background: $dark-color;
+		font-family: $main-font;
+		color: $accent-color;
+		position: relative;
+
+		.project-close {
+			position: absolute;
+			top: 2vh;
+			left: 2vh;
+			font-size: 2em;
+			cursor: pointer;
+
+			&:hover { color: $light-color; }
+		}
+
+		.project-popup-icons {
+			height: 10vh;
+			width: fit-content;
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-rows: 1fr;
+			gap: 5vh;
+			align-content: center;
+			justify-items: start;
+			* { 
+				color: $accent-color; 
+				grid-row: 1;
+			}
+		}
 	}
 }
 

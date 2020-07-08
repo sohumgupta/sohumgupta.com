@@ -2,6 +2,7 @@ import * as React from 'react';
 import './AboutSection.scss';
 
 import { ReactComponent as PictureOutline } from '../../Assets/PictureOutline.svg';
+import { ReactComponent as Hi } from '../../Assets/AboutHi.svg';
 
 class AboutSection extends React.Component {
 	constructor(props) {
@@ -33,9 +34,9 @@ class AboutSection extends React.Component {
 						<a href="https://www.google.com" rel="noopener noreferrer" target="_blank">Resumé</a>
 					</div>
 					<div className="about-text-wrapper">
-						<div className="about-text">
-							<span className="about-drop-cap">HI.</span> I'm a rising junior at Brown University, on track to graduate in May '22 with a degree in Computer Science (and possibly another one in Architectural Studies?). I'm passionate about UI/UX and  Full-Stack development. On campus, I'm a Head TA for a functional programming class and I'm a full-stack developer for a start-up called Cress. Outside of class, I'm passionate about cooking, film photography, graphic design, fashion, and music. HMU if you want to make some homemade pasta, take some grainy pictures, need a logo, want to go thrifting, or if you're tryna host a listening party for WLR (whenever it drops)!
-						</div>
+						<p className={"about-text" + (this.state.visible ? " visible" : "")}>
+							<span className="about-hi"><Hi/></span> I'm a rising junior at Brown University, on track to graduate in May '22 with a degree in Computer Science (and possibly another one in Architectural Studies?). I'm passionate about UI/UX and  Full-Stack development. On campus, I'm a Head TA for a functional programming class and I'm a full-stack developer for a start-up called Cress. Outside of class, I'm passionate about cooking, film photography, graphic design, fashion, and music. HMU if you want to make some homemade pasta, take some grainy pictures, need a logo, want to go thrifting, or if you're tryna host a listening party for WLR (whenever it drops)!
+						</p>
 					</div>
 				</div>
 			</div>
