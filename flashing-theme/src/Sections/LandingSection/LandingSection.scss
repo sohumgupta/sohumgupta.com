@@ -36,7 +36,7 @@
 		.landing-text {
 			@include outline;
 			-webkit-user-select: none;
-			font-size: 5.5em;
+			font-size: min(11vh, 15vw);
 			font-family: $display-font;
 			color: rgba(0,0,0,0);
 			animation: blink;
@@ -67,12 +67,6 @@
 					fill: $light-color;
 				}
 			}
-		}
-
-		@keyframes blink {
-			100% { color: rgba(0,0,0,0); }
-			50% { color: rgba(0,0,0,0); }
-			0% { color: $accent-color; }
 		}
 	}
 }

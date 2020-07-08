@@ -38,39 +38,66 @@
 		}
 	}
 
-	.about-text-wrapper {
+
+	.about-right-wrapper {
 		width: 80%;
 		height: fit-content;
-		position: absolute;
-		background: $dark-color;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
+		position: absolute;
 
-		.about-text {
-			text-align: justify;
-			hyphens: auto;
-			width: calc(100% - 40vh);
+		.about-resume {
+			font-family: $display-font;
+			font-size: 6vh;
+			text-align: right;
+			width: 100%;
+
+			a {
+				text-decoration: none;
+				color: $dark-color;
+
+				&:hover { 
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.about-text-wrapper {
+			width: 100%;
 			height: fit-content;
-			padding: 2em;
-			padding-left: 0;
-			font-family: $main-font;
-			color: white;
-			font-size: 2.25vh;
-
-			.about-drop-cap {
-				color: rgba(0,0,0,0);
-				font-family: $display-font;
-				float: left;
-				padding: 0;
-				font-size: 3.6em;
-				margin-right: 0.2em;
-				line-height: 0.9em;
-
-				@include outline($light-color);
+			background: $dark-color;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+	
+			.about-text {
+				text-align: justify;
+				hyphens: auto;
+				width: calc(100% - 40vh);
+				height: fit-content;
+				padding: 5vh;
+				padding-left: 0;
+				font-family: $main-font;
+				color: $light-color;
+				font-size: 2.25vh;
+	
+				.about-drop-cap {
+					color: rgba(0,0,0,0);
+					font-family: $display-font;
+					float: left;
+					padding: 0;
+					font-size: 3.6em;
+					margin-right: 0.15em;
+					line-height: 0.9em;
+	
+					@include outline($light-color);
+				}
 			}
 		}
 	}
+
 }
 
 .resized {
@@ -78,23 +105,30 @@
 	align-items: center;
 	justify-content: flex-end;
 	height: fit-content;
+	padding-bottom: 5vh;
 
 	.about-image-wrapper {
 		position: static;
-		height: 60%;
+		width: min(45vh, 80vw);
 		margin: 0;
 		margin-bottom: -20vh;
 
 		svg { position: static; max-height: 100%; max-width: 100%; }
 	}
 
-	.about-text-wrapper {
+	.about-right-wrapper {
+		width: 80%;
 		position: static;
-		z-index: 20;
 
-		.about-text {
-			width: 100%;
-			padding-left: 2em;
+		.about-text-wrapper {
+			position: static;
+			z-index: 20;
+	
+			.about-text {
+				font-size: min(2.25vh, 4vw);
+				width: 100%;
+				padding-left: 2em;
+			}
 		}
 	}
 }

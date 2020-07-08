@@ -3,7 +3,7 @@ import './MarqueeSection.scss';
 
 class MarqueeSection extends React.Component {
 	render() {
-		const marqueeStyle = this.props.direction === "horizontal" ? {
+		const marqueeStyle = this.props.resize ? {
 			width: '100vw',
 			height: '90vh'
 		} : {
@@ -14,7 +14,7 @@ class MarqueeSection extends React.Component {
 			transform: 'rotate(-90deg)'
 		}
 
-		const backwardsStyle = this.props.direction === "vertical" ? " upside-down" : ""
+		const backwardsStyle = this.props.resize ? "" : " upside-down"
 
 		return (
 			<div className="marquee-wrapper" style={marqueeStyle}>

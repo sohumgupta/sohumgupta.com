@@ -1,6 +1,6 @@
 @import '../../Main.scss';
 
-.social-icon-wrapper {
+.icon-wrapper {
 	width: auto;
 	height: auto;
 	display: flex;
@@ -14,17 +14,18 @@
 	* {
 		font-size: 2em;
 		line-height: 0em;
-		color: $dark-color;
+		color: $accent-color;
 	}
 
-	&:hover .social-icon-circle { opacity: 1 }
+	&:hover .icon-circle { opacity: 1 }
 
-	.social-icon-circle {
+	.icon-circle {
 		position: absolute;
 		width: 300%;
-		height: 300%;
+		height: auto;
 		top: 0%;
 		opacity: 0;
+		z-index: 20;
 
 		svg {
 			fill: $light-color;

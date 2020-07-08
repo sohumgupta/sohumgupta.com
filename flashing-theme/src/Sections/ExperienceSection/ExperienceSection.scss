@@ -1,0 +1,112 @@
+@import '../../Main.scss';
+
+.experience-wrapper {
+	width: 100vw;
+	padding: 0 min(25vh, 10vw);
+	height: fit-content;
+	background: $dark-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.experience-border {
+		height: 1vh;
+		width: min(80vh, 80vw);
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		.experience-border-element {
+			border: .15vh solid $accent-color;
+			margin: 0 1vh;
+			width: 25vh;
+			height: 100%;
+			transform: skew(-30deg);
+
+			&:nth-child(2) { background: $accent-color; }
+		}
+	}
+
+	.experience-text {
+		padding: 5vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.experience-header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			-webkit-user-select: none;
+
+			&:hover {
+				.experience-organization { color: $accent-color; }
+				.experience-title { color: rgba(0,0,0,0); @include outline; }
+			}
+	
+			.experience-organization {
+				font-size: 5vh;
+				font-family: $display-font;
+				color: rgba(0,0,0,0);
+				@include outline;
+			}
+	
+			.experience-separation {
+				margin: 0 1em;
+				width: 0.5vh;
+				height: 2vh;
+				background: $accent-color;
+				transform: skew(0, 30deg);
+			}
+			
+			.experience-title {
+				font-size: 5vh;
+				font-family: $display-font;
+				color: $accent-color;
+			}
+		}
+
+		.experience-dates {
+			font-family: $display-font;
+			color: $accent-color;
+			margin-bottom: 1em;
+			font-size: 1.5em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.experience-bullet {
+				margin: 0 1em;
+				width: 2vh;
+				height: 0.5vh;
+				background: $accent-color;
+				transform: skew(30deg);
+			}
+		}
+	
+		.experience-descriptions {
+	
+			.experience-description {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+	
+				.experience-bullet {
+					margin-right: 1em;
+					width: 2vh;
+					height: 0.5vh;
+					background: $accent-color;
+					transform: skew(30deg);
+				}
+	
+				font-size: 2.25vh;
+				color: white;
+				font-family: $main-font;
+				margin: 0.5em 0;
+			}
+		}
+	}
+}
