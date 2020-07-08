@@ -2,7 +2,7 @@
 
 .experience-wrapper {
 	width: 100vw;
-	padding: 0 min(25vh, 10vw);
+	padding: 0 5vw;
 	height: fit-content;
 	background: $dark-color;
 	display: flex;
@@ -48,7 +48,7 @@
 			}
 	
 			.experience-organization {
-				font-size: 5vh;
+				font-size: min(5vh, 6vw);
 				font-family: $display-font;
 				color: rgba(0,0,0,0);
 				@include outline;
@@ -63,7 +63,7 @@
 			}
 			
 			.experience-title {
-				font-size: 5vh;
+				font-size: min(5vh, 6vw);
 				font-family: $display-font;
 				color: $accent-color;
 			}
@@ -73,7 +73,7 @@
 			font-family: $display-font;
 			color: $accent-color;
 			margin-bottom: 1em;
-			font-size: 1.5em;
+			font-size: min(3vh, 4vw);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -102,8 +102,9 @@
 					transform: skew(30deg);
 				}
 	
-				font-size: 2.25vh;
-				color: white;
+				font-size: min(2.25vh, 3vw);
+				color: $light-color;
+				font-weight: bold;
 				font-family: $main-font;
 				margin: 0.5em 0;
 			}

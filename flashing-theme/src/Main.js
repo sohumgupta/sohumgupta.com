@@ -48,6 +48,7 @@ class Main extends React.Component {
 			<ProjectsSection title={p.title} 
 				organization={p.organization} 
 				date={p.date} 
+				resize={resize}
 				description={p.description}
 				technologies={p.technologies}
 				icons={p.icons}/>
@@ -63,6 +64,7 @@ class Main extends React.Component {
 				<SectionHeader section="Experience" color="dark"/>
 				{renderedExperiences}
 				<SectionHeader section="Projects" color="accent"/>
+				{renderedProjects}
 				<ContactSection resize={resize}/>
 			</div>
 		)

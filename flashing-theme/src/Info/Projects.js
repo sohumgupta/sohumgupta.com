@@ -3,7 +3,7 @@ import { FaGithub, FaGoogleDrive } from 'react-icons/fa';
 
 const projects = [
 	{
-		organization: "Intro to Software Engineering",
+		organization: "Software Engineering",
 		title: "The Admiral",
 		date: "May 2020 ",
 		description: "This was cool project i did!!!",
