@@ -19,24 +19,10 @@ class MarqueeSection extends React.Component {
 		return (
 			<div className="marquee-wrapper" style={marqueeStyle}>
 				<div className="marquee-line">
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
-					<p className="marquee-text">Brown University '22</p>
+					{ Array(8).fill(<p className="marquee-text">Brown University '22</p>) }
 				</div>
 				<div className="marquee-line backwards">
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
-					<p className={"marquee-text" + backwardsStyle}>Computer Science</p>
+					{ Array(8).fill(<p className={"marquee-text" + backwardsStyle}>Computer Science</p>) }
 				</div>
 			</div>
 		)

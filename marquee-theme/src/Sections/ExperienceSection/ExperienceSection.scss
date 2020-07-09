@@ -41,11 +41,6 @@
 			align-items: center;
 			justify-content: center;
 			-webkit-user-select: none;
-
-			&:hover {
-				.experience-organization { color: $accent-color; }
-				.experience-title { color: rgba(0,0,0,0); @include outline; }
-			}
 	
 			.experience-organization {
 				font-size: min(5vh, 6vw);

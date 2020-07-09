@@ -1,0 +1,18 @@
+@import '../../Main.scss';
+
+.project-tech {
+	margin: 0 1vh;
+	background: $dark-color;
+	padding: 1vh;
+	transform: skew(-10deg);
+	position: relative;
+	cursor: default;
+
+	&:hover { background: $accent-color; }
+
+	.project-tech-text { 
+		color: $light-color;
+		font-size: 3vh;
+		transform: skew(10deg);
+	}
+}

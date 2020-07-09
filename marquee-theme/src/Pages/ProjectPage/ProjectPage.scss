@@ -1,0 +1,180 @@
+@import '../../Main.scss';
+
+.project-page {
+
+	.marquee-wrapper {
+		position: absolute;
+		z-index: 20;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em 0;
+
+		width: 40vh;
+		height: 100vw;
+		left: calc((100vw - 40vh)/2);
+		top: calc((40vh - 100vw)/2);
+		transform: rotate(-90deg);
+
+		$move-initial: calc(-20%);
+		$move-final: calc(-40%);
+		
+		.backwards { 
+			animation-direction: reverse !important;
+			animation-duration: 1.25s !important;
+		}
+
+		.marquee-line {
+			width: fit-content;
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: flex-start;
+			overflow: hidden;
+
+			animation: marquee 2s linear infinite;
+
+			&:hover .marquee-text {  font-style: italic; }
+
+			.marquee-text {
+				@include outline($dark-color);
+				font-family: $main-font;
+				font-size: 2em;
+				color: rgba(0,0,0,0);
+				text-transform: uppercase;
+				font-weight: 700;
+				margin: 0 0.5em;
+				white-space: pre;
+
+				&:hover { color: $dark-color; }
+			}
+
+			.upside-down {
+				transform: rotate(-180deg)
+			}
+
+			@keyframes marquee {
+				0% { transform: translate($move-initial, 0); }
+				100% { transform: translate($move-final, 0); }
+			}
+		}
+	}
+
+	.project-image {
+		width: 100vw;
+		height: 40vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.project-header {
+		width: 100vw;
+		height: 40vh;
+		font-family: $display-font;
+		color: $dark-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background: rgba($light-color, 0.25);
+		backdrop-filter: blur(1vh);
+		z-index: 10;
+
+		.project-name {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+			font-size: 7vh;
+
+			.project-organization {
+				background: none;
+				@include outline($dark-color, .2vh);
+				color: rgba(0,0,0,0);
+			}
+
+			.project-title {
+				background: none;
+			}
+
+			.project-separation {
+				margin: 0 2vh;
+				width: 0.75vh;
+				height: 7vh;
+				background: $dark-color;
+				transform: skew(0, 30deg);
+			}
+		}
+
+		.project-tech-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.project-date {
+		font-family: $display-font;
+		color: $dark-color;
+		margin-bottom: 1em;
+		font-size: min(4vh, 6vw);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.project-date-bullet {
+			margin: 0 3vh;
+			width: 2vh;
+			height: 0.5vh;
+			background: $dark-color;
+			transform: skew(30deg);
+		}
+	}
+
+	.project-description {
+		height: fit-content;
+		text-align: justify;
+		min-height: 40vh;
+		background: $dark-color;
+		padding: 10vh 40vh;
+		font-size: 2.5vh;
+		color: $light-color;
+		font-family: $main-font;
+	}
+
+	.project-links {
+		width: 100vw;
+		min-height: 20vh;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: $accent-color;
+		padding-top: 5vh;
+		padding-bottom: 2vh;
+	
+		.project-links-text {
+			color: $light-color;
+			font-size: 4vh;
+			font-family: $display-font;
+		}
+
+		.project-links-icons {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+
+			* { color: $dark-color; }
+		}
+	}
+}
