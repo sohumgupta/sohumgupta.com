@@ -30,6 +30,21 @@ class ProjectPage extends React.Component {
 		const aspectRatio = (this.state.width / this.state.height);
 		const resize = (aspectRatio < resizeRatio);
 
+		let background = <></>;
+		if (this.props.video) {
+			background = (
+				<div className="project-video">
+					<video autoPlay loop muted>
+						<source src={this.props.video} type="video/mp4"/>
+					</video>
+				</div>
+			);
+		} else {
+			background = (
+				<div className="project-image" style={{backgroundImage: 'url(' + this.props.image + ')'}}/>
+			);
+		}
+
 		return (
 			<div className="project-page">
 				<div className="marquee-wrapper">
@@ -40,7 +55,7 @@ class ProjectPage extends React.Component {
 						{ Array(5).fill(<p className="marquee-text upside-down">{this.props.title}</p>) }
 					</div>
 				</div>
-				<div className="project-image" style={{backgroundImage: 'url(' + this.props.image + ')'}}/>
+				{background}
 				<div className="project-header">
 					<div className="project-name">
 						<mark className="project-organization">{this.props.organization}</mark>

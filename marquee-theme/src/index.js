@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import Main from './Main';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Main/>
-  </React.StrictMode>,
+	<BrowserRouter>
+		<Main/>
+	</BrowserRouter>,
   document.getElementById('root')
 );
 

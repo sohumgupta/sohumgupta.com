@@ -23,7 +23,7 @@
 		
 		.backwards { 
 			animation-direction: reverse !important;
-			animation-duration: 1.25s !important;
+			animation-duration: 4s !important;
 		}
 
 		.marquee-line {
@@ -34,7 +34,7 @@
 			justify-content: flex-start;
 			overflow: hidden;
 
-			animation: marquee 2s linear infinite;
+			animation: marquee-project 5s linear infinite;
 
 			&:hover .marquee-text {  font-style: italic; }
 
@@ -55,7 +55,7 @@
 				transform: rotate(-180deg)
 			}
 
-			@keyframes marquee {
+			@keyframes marquee-project {
 				0% { transform: translate($move-initial, 0); }
 				100% { transform: translate($move-final, 0); }
 			}
@@ -72,6 +72,27 @@
 		background-size: cover;
 	}
 
+	.project-video {
+		width: 100vw;
+		height: 40vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		video {
+			position: absolute;
+			z-index: -1;
+			background: gray no-repeat;
+			background-size: 100% 100%;
+			left: 0; right: 0; bottom: 0; top: 0;
+			margin: auto;
+			min-width: 100%;
+			min-height: 100%;
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	.project-header {
 		width: 100vw;
 		height: 40vh;
@@ -83,7 +104,7 @@
 		justify-content: center;
 		position: relative;
 		background: rgba($light-color, 0.25);
-		backdrop-filter: blur(1vh);
+		backdrop-filter: blur(0.5vh) saturate(150%);
 		z-index: 10;
 
 		.project-name {

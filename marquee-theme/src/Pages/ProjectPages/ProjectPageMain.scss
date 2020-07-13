@@ -1,0 +1,32 @@
+@import '../../Main.scss';
+
+.project-page-text {
+	margin: 1em 0;
+}
+
+.project-page-picture {
+	width: 100%;
+	text-align: center;
+	margin: 4vw 0;
+
+	.project-page-image {
+		width: 80%;
+	}
+}
+
+.project-page-caption {
+	font-size: .75em;
+	display: inline-block;
+	max-width: 70%;
+	margin: 0;
+	margin-top: 2vh;
+	transform: skew(-10deg);
+	background-color: $accent-color;
+	padding: .2em .5em;
+	
+	p {
+		font-weight: 700;
+		color: $light-color;
+		transform: skew(10deg);
+	}
+}
