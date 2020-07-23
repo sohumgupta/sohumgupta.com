@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import '../../Main.scss';
 import './ProjectPage.scss';
 
@@ -6,6 +7,7 @@ import Technology from '../../Components/Technology/Technology';
 import Icon from '../../Components/Icon/Icon';
 
 const resizeRatio = 1.333;
+const noMarqueeRatio = 0.75;
 
 class ProjectPage extends React.Component {
 	constructor(props) {
@@ -18,7 +20,7 @@ class ProjectPage extends React.Component {
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
-	componentDidMount() { this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); }
+	componentDidMount() { this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); window.scrollTo(0, 0); }
 	componentWillUnmount() { window.removeEventListener('resize', this.updateWindowDimensions); }
 	updateWindowDimensions() { this.setState({ width: window.innerWidth, height: window.innerHeight }); }
 
@@ -26,6 +28,8 @@ class ProjectPage extends React.Component {
 
 		const aspectRatio = (this.state.width / this.state.height);
 		const resize = (aspectRatio < resizeRatio);
+		const noMarquee = (aspectRatio < noMarqueeRatio);
+		console.log(noMarquee)
 
 		let background = <></>;
 		if (this.props.video) {
@@ -43,7 +47,7 @@ class ProjectPage extends React.Component {
 		}
 
 		return (
-			<div className="project-page">
+			<div className={"project-page" + (resize ? " resize" : "") + (noMarquee ? " no-marquee" : "")}>
 				<div className="marquee-wrapper">
 					<div className="marquee-line">
 						{ Array(5).fill(<p className="marquee-text">{this.props.organization}</p>) }
@@ -69,7 +73,9 @@ class ProjectPage extends React.Component {
 					</div>
 				</div>
 				<div className="project-description">
-					{this.props.children}
+					<div className="project-text">
+						{this.props.children}
+					</div>
 				</div>
 				<div className="project-links">
 					<div className="project-links-text">View my project here:</div>

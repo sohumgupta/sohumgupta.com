@@ -4,13 +4,9 @@ import Admiral from '../Assets/ProjectPictures/Admiral/AdmiralPicture.png';
 import Aroma from '../Assets/ProjectPictures/Aroma/AromaPicture.png';
 import OMR from '../Assets/ProjectPictures/OMR/OMR.png';
 import TwistMuseum from '../Assets/ProjectPictures/TwistMuseum/TwistDetailPicture.png';
+import Comics from '../Assets/ProjectPictures/Comics/ComicsPicture.png';
 
 const projects = [
-	{
-		title: "Organization Dashboard",
-		image: TwistMuseum,
-		navigation: "/aroma"
-	},
 	{
 		title: "The Admiral",
 		image: Admiral,
@@ -33,7 +29,7 @@ const projects = [
 	},
 	{
 		title: "Comics",
-		image: TwistMuseum,
+		image: Comics,
 		navigation: "/comics"
 	},
 ];
