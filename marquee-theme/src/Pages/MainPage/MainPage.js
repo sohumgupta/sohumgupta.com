@@ -34,7 +34,7 @@ class MainPage extends React.Component {
 
 		const aspectRatio = (this.state.width / this.state.height);
 		const resize = (aspectRatio < resizeRatio);
-		const scrollTo = resize ? window.innerHeight : (window.innerHeight * .75);
+		const scrollTo = window.innerHeight * 0.9;
 
 		const renderedExperiences = experiences.map((e) => 
 			<ExperienceSection 

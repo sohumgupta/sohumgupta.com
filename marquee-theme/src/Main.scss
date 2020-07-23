@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @import 'Themes/Strawberry.scss';
-// @import 'Themes/MintChocoChip.scss';
-// @import 'Themes/Electro.scss';
-// @import 'Themes/Lavender.scss';
+//@import 'Themes/MintChocoChip.scss';
+//@import 'Themes/Electro.scss';
+//@import 'Themes/Lavender.scss';
 
 @font-face {
 	font-family: 'Laguna Creek';
@@ -49,23 +49,26 @@ $main-font: 'Apercu Mono', sans-serif;
 	0% { color: $dark-color; }
 }
 
-/* FADE ANIMATION */
-.fade-appear,
-.fade-enter {
-    opacity: 0;
-    z-index: 1;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms linear 150ms;
+/* Declare transition start properties*/
+.slide-enter {
+    transform: translateX(-100vw);
+    position: absolute;
 }
 
-.fade-exit {
+/* Declare transition properties */
+.slide-enter.slide-enter-active {
+    transform: translateX(0);
     opacity: 1;
+    transition: all 00ms linear 300ms;
 }
 
-.fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 150ms linear;
+/* EXIT TRANSITION */
+.slide-exit {
+    transform: translateX(0);
+    
+}
+
+.slide-exit.slide-exit-active {
+    transform: translateX(100vw);
+    transition: all 300ms linear
 }

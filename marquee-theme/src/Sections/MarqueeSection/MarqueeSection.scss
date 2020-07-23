@@ -31,7 +31,7 @@
 		&:hover .marquee-text {  font-style: italic; }
 
 		.marquee-text {
-			@include outline;
+			@include outline($width: 0.05vh);
 			font-family: $main-font;
 			font-size: 2em;
 			color: rgba(0,0,0,0);

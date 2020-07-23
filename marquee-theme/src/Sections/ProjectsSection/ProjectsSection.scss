@@ -1,14 +1,78 @@
 @import '../../Main.scss';
 
-.projects-wrapper {
-	display: grid;
-	padding: 0 calc((100% - 120vh - 3vw)/2);
+.project-thumbnail-wrapper {
+	width: 100%;
+	height: 30vh;
+	padding: 1vh;
+	background: $dark-color;
+	cursor: pointer;
+	transition: all 0.5s ease;
+
+	border: 0.15vh solid rgba(0,0,0,0);
+
+	a { text-decoration: none;}
+
+	.project-thumbnail {
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		transition: all .25s ease;
+
+		.project-title {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1em;
+
+			background: rgba($light-color, 0.25);
+			backdrop-filter: blur(0.5vh) saturate(150%);
+
+			text-align: center;
+			font-family: $display-font;
+			font-size: 5vh;
+			color: $dark-color;
+			transition: all 0.5s ease;
+		}
+	}
+
+	&:hover {
+		background: rgba($dark-color, 0);
+		border-color: $dark-color;
+		transition: all 0.5s ease;
+
+		.project-title {
+			color: rgba($dark-color,0);
+			@include outline($color: $dark-color);
+			transition: all 0.5s ease;
+		}
+	}
+}
+
+.projects-section-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+	padding-bottom: 5vh;
 	background: $accent-color;
-	position: relative;
+
+	.projects-wrapper {
+		width: 100vh;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		gap: 3vh;
+	}
 }
 
 .resize {
-	grid-template-columns: 60vh;
-	padding: 0 calc((100vw - 60vh)/2);
-	padding-bottom: 5vh;
+	
 }

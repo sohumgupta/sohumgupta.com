@@ -1,46 +1,41 @@
 import * as React from 'react';
-import { FaGithub, FaGoogleDrive } from 'react-icons/fa';
 
-import Admiral from '../Assets/ProjectPictures/Admiral.png';
-import OMR from '../Assets/ProjectPictures/OMR.png';
+import Admiral from '../Assets/ProjectPictures/Admiral/AdmiralPicture.png';
+import Aroma from '../Assets/ProjectPictures/Aroma/AromaPicture.png';
+import OMR from '../Assets/ProjectPictures/OMR/OMR.png';
+import TwistMuseum from '../Assets/ProjectPictures/TwistMuseum/TwistDetailPicture.png';
 
 const projects = [
 	{
-		organization: "Software Engineering",
+		title: "Organization Dashboard",
+		image: TwistMuseum,
+		navigation: "/aroma"
+	},
+	{
 		title: "The Admiral",
-		date: "May 2020",
-		description: "This was cool project i did!!!",
-		technologies: ["Unity", "C#", "Blender"],
-		icons: [
-			{ icon: <FaGithub/>, url: "" },
-			{ icon: <FaGoogleDrive/>, url: "" },
-		],
-		image: Admiral
+		image: Admiral,
+		navigation: "/admiral"
 	},
 	{
-		organization: "Computer Vision",
 		title: "Optical Music Recognition",
-		date: "May 2020",
-		description: "This was cool project i did!!!",
-		technologies: ["Python", "Tensorflow"],
-		icons: [
-			{ icon: <FaGithub/>, url: "" },
-			{ icon: <FaGoogleDrive/>, url: "" },
-		],
-		image: OMR
+		image: OMR,
+		navigation: "/dailymidi"
 	},
 	{
-		organization: "Computer Vision",
-		title: "Optical Music Recognition",
-		date: "May 2020",
-		description: "This was cool project i did!!!",
-		technologies: ["Python", "Tensorflow"],
-		icons: [
-			{ icon: <FaGithub/>, url: "" },
-			{ icon: <FaGoogleDrive/>, url: "" },
-		],
-		image: OMR
+		title: "Aroma",
+		image: Aroma,
+		navigation: "/aroma"
 	},
-]
+	{
+		title: "The Twist Museum",
+		image: TwistMuseum,
+		navigation: "/twistmuseum"
+	},
+	{
+		title: "Comics",
+		image: TwistMuseum,
+		navigation: "/comics"
+	},
+];
 
 export default projects;

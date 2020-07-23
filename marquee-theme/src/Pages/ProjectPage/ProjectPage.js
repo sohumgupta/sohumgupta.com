@@ -5,9 +5,6 @@ import './ProjectPage.scss';
 import Technology from '../../Components/Technology/Technology';
 import Icon from '../../Components/Icon/Icon';
 
-import Admiral from '../../Assets/ProjectPictures/Admiral.png';
-import { FaGithub, FaGoogleDrive } from 'react-icons/fa';
-
 const resizeRatio = 1.333;
 
 class ProjectPage extends React.Component {

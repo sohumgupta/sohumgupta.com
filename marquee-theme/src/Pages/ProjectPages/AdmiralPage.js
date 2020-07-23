@@ -3,7 +3,9 @@ import * as React from 'react';
 import './ProjectPageMain.scss';
 
 import ProjectPage from '../ProjectPage/ProjectPage';
-import Admiral from '../../Assets/ProjectPictures/Admiral.png';
+
+import AdmiralVideo from '../../Assets/ProjectPictures/Admiral/AdmiralVideo.mov';
+
 import { FaGithub, FaGoogleDrive } from 'react-icons/fa';
 
 class AdmiralPage extends React.Component {
@@ -13,7 +15,7 @@ class AdmiralPage extends React.Component {
 				organization="Software Engineering"
 				title="The Admiral"
 				date="May 2020"
-				image={Admiral}
+				video={AdmiralVideo}
 				links={[{ icon: <FaGithub/>, url: ""}, { icon: <FaGoogleDrive/>, url: ""}]}
 				technologies={["Unity", "C#"]}
 			>
