@@ -31,7 +31,7 @@ class AboutSection extends React.Component {
 				</div>
 				<div className="about-right-wrapper">
 					<div className="about-resume">
-						<a href="https://www.google.com" rel="noopener noreferrer" target="_blank">Resumé</a>
+						<a href="https://drive.google.com/file/d/1gZrbeegvSjv8l7BMKPDYiq5diuID4Ob1/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resumé</a>
 					</div>
 					<div className="about-text-wrapper">
 						<p className={"about-text" + (this.state.visible ? " visible" : "")}>

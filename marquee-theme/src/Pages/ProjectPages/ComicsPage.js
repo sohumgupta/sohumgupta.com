@@ -17,6 +17,7 @@ class ComicsPage extends React.Component {
 			<ProjectPage
 				organization="Comics Seminar"
 				title="Personal Work"
+				tabTitle="Comics"
 				date="Spring 2020"
 				image={ComicsBanner}
 				links={[{ icon: <FaGoogleDrive/>, url: "https://drive.google.com/drive/folders/1lskf1p-q-OSHLlW7BBCPWL0UM0CsEknB?usp=sharing"}]}

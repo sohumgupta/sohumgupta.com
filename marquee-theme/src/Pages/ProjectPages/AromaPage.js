@@ -17,9 +17,10 @@ class AromaPage extends React.Component {
 			<ProjectPage
 				organization="YHack 2019"
 				title="Aroma"
+				tabTitle="Aroma"
 				date="May 2020"
 				image={AromaPicture}
-				links={[{ icon: <FaGithub/>, url: ""}]}
+				links={[{ icon: <FaGithub/>, url: "https://github.com/sohumgupta/aroma"}]}
 				technologies={["React", "Express", "Node.js", "MongoDB"]}
 			>
 				<p className="project-page-text">Over the past few years, my friends and I have traveled a bit, with family, friends, or alone, and there's one thing that we all realized: it's extremely hard to find travel recommendations for a city. Sure, you could search up "best attractions in ___" on Google, and try to parse through the first page of results, but then you just end up visiting the same place as every other tourist in the city, and you never get a real sense of what the city is actually like. In actuality, the best travel recommendations we had found were from small, undiscovered travel blogs, written by people who just wanted to share their favorite experiences in a city.</p>

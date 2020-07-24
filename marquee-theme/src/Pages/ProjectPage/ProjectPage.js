@@ -20,7 +20,7 @@ class ProjectPage extends React.Component {
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
-	componentDidMount() { this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); window.scrollTo(0, 0); }
+	componentDidMount() { document.title = "sohum gupta | " + (this.props.tabTitle.toLowerCase()); this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); window.scrollTo(0, 0); }
 	componentWillUnmount() { window.removeEventListener('resize', this.updateWindowDimensions); }
 	updateWindowDimensions() { this.setState({ width: window.innerWidth, height: window.innerHeight }); }
 
@@ -86,6 +86,10 @@ class ProjectPage extends React.Component {
 			</div>
 		)
 	}
+}
+
+ProjectPage.defaultProps = {
+	tabTitle: "Project"
 }
 
 export default ProjectPage;

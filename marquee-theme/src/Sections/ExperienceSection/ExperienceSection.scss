@@ -92,6 +92,7 @@
 				.experience-bullet {
 					margin-right: 1em;
 					width: 2vh;
+					min-width: 2vh;
 					height: 0.5vh;
 					background: $accent-color;
 					transform: skew(30deg);

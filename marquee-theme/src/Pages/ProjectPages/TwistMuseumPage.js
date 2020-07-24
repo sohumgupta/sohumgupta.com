@@ -17,6 +17,7 @@ class TwistMuseumPage extends React.Component {
 			<ProjectPage
 				organization="Contemporary Architecture"
 				title="The Twist Museum"
+				tabTitle="The Twist Museum"
 				date="May 2020"
 				video={TwistMuseumVideo}
 				links={[{ icon: <FaGoogleDrive/>, url: "https://drive.google.com/file/d/1XtO7B3D4Di5dMmYjxVHbu5YALo7nq6GG/view?usp=sharing"}]}
