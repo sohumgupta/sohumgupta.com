@@ -46,12 +46,14 @@
 				font-size: min(5vh, 6vw);
 				font-family: $display-font;
 				color: rgba(0,0,0,0);
+				text-align: right;
 				@include outline;
 			}
 	
 			.experience-separation {
 				margin: 0 1em;
 				width: 0.5vh;
+				min-width: 0.5vh;
 				height: 2vh;
 				background: $accent-color;
 				transform: skew(0, 30deg);
