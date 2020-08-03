@@ -178,8 +178,8 @@
 		margin: 0 .25em;
 	}
 
-	.resume-technology { border-bottom: .1em solid rgba($accent-color, 1); }
-	.resume-software { border-bottom: .1em solid rgba($dark-color, 0.6); }
+	.resume-technology { border-bottom: .25vh solid rgba($accent-color, 1); @media print { border-bottom-width: .125vh }; }
+	.resume-software { border-bottom: .25vh solid rgba($dark-color, 0.6); @media print { border-bottom-width: .125vh }; }
 }
 
 .resume-course {
@@ -206,7 +206,7 @@
 		display: flex;
 		flex-direction: column;
 
-		font-size: 0.8em;
+		font-size: 0.75em;
 	
 		.resume-experience-heading, .resume-activity-heading { 
 			@media print { font-size: 11pt; }
@@ -252,7 +252,7 @@
 
 	.resume-project {
 		font-weight: normal;
-		font-size: 0.75em;
+		font-size: 0.6em;
 
 		@media print { font-size: 10pt; }
 

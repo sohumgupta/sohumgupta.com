@@ -51,7 +51,7 @@ export const activities = [
 		dates: "May 2019 - Present",
 		descriptions: [
 			"Create handouts and solutions for projects in a two-semester long introductory course sequence.",
-			"Held weekly lab sections and office hours for classes of 200+ kids, and attended weekly meetings with a teaching assistant staff of 25+.",
+			"Held weekly lab sections and office hours for classes of 200+ students, and attended weekly meetings with a teaching assistant staff of 25+.",
 			"Graded homeworks and projects in weekly meetings."
 		]
 	},
