@@ -120,13 +120,15 @@
 	}
 }
 
-.resize {
-	.resume-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
+@media screen {
+	.resize {
+		.resume-content {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+		.resume-header { flex-direction: column; }
 	}
-	.resume-header { flex-direction: column; }
 }
 
 .resume-section {
