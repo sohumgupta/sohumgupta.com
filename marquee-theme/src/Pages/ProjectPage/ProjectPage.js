@@ -25,11 +25,9 @@ class ProjectPage extends React.Component {
 	updateWindowDimensions() { this.setState({ width: window.innerWidth, height: window.innerHeight }); }
 
 	render() {
-
 		const aspectRatio = (this.state.width / this.state.height);
 		const resize = (aspectRatio < resizeRatio);
 		const noMarquee = (aspectRatio < noMarqueeRatio);
-		console.log(noMarquee)
 
 		let background = <></>;
 		if (this.props.video) {

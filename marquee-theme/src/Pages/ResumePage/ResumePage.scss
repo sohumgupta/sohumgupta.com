@@ -47,7 +47,7 @@
 	.resume-name {
 		font-family: $display-font;
 		color: $accent-color;
-		font-size: 4em;
+		font-size: min(4em, 10vw);
 		line-height: 0.8em;
 		height: 0.8em;
 	}
@@ -118,6 +118,15 @@
 		
 		@media print { gap: 0.5em; }
 	}
+}
+
+.resize {
+	.resume-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	.resume-header { flex-direction: column; }
 }
 
 .resume-section {

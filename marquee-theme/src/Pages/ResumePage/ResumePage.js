@@ -4,7 +4,22 @@ import './ResumePage.scss';
 
 import { links, experiences, skills, courses, activities, projects } from './ResumeInfo';
 
+const resizeRatio = 1;
+
 class ResumePage extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { 
+			width: window.innerWidth, 
+			height: window.innerHeight,
+		};
+
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	}
+
+	componentDidMount() { document.title = "sohum gupta | resume"; this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); window.scrollTo(0, 0); }
+	componentWillUnmount() { window.removeEventListener('resize', this.updateWindowDimensions); }
+	updateWindowDimensions() { this.setState({ width: window.innerWidth, height: window.innerHeight }); }
 
 	renderLinks() {
 		return links.map((l) => 
@@ -57,9 +72,12 @@ class ResumePage extends React.Component {
 	}
 	
 	render() {
+		const aspectRatio = (this.state.width / this.state.height);
+		const resize = (aspectRatio < resizeRatio);
+
 		return (
 			<div className="resume-page">
-				<div className="resume-wrapper">
+				<div className={"resume-wrapper" + (resize ? " resize" : "")}>
 					<div className="resume-header">
 						<div className="resume-name">
 							Sohum Gupta
