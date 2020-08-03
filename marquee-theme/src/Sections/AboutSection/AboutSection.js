@@ -4,6 +4,8 @@ import './AboutSection.scss';
 import { ReactComponent as PictureOutline } from '../../Assets/PictureOutline.svg';
 import { ReactComponent as Hi } from '../../Assets/AboutHi.svg';
 
+import { NavLink } from 'react-router-dom';
+
 class AboutSection extends React.Component {
 	constructor(props) {
 		super(props);
@@ -31,7 +33,8 @@ class AboutSection extends React.Component {
 				</div>
 				<div className="about-right-wrapper">
 					<div className="about-resume">
-						<a href="https://drive.google.com/file/d/1gZrbeegvSjv8l7BMKPDYiq5diuID4Ob1/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resumé</a>
+						<NavLink to="/resume">Resumé</NavLink>
+						<a href="https://drive.google.com/file/d/1i0ENmjIy9M2RAh-wB2KB139eqPXDl-ZC/view?usp=sharing" rel="noopener noreferrer" target="_blank">(PDF Version)</a>
 					</div>
 					<div className="about-text-wrapper">
 						<p className={"about-text" + (this.state.visible ? " visible" : "")}>

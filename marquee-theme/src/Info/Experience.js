@@ -1,7 +1,7 @@
 const experiences = [
 	{
 		organization: "Cress Health",
-		title: "Full-Stack Developer",
+		title: "Technical Product Manager",
 		dates: "Jan. 2020 - Present",
 		descriptions: [
 			"Worked on the front-end for the Cress mobile app, using React Native, and implemented settings, insights, and reports pages.",
