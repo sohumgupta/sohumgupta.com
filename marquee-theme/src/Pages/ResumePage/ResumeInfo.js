@@ -48,9 +48,9 @@ export const experiences = [
 		title: "Technical Product Manager",
 		dates: "Jan. 2020 - Aug. 2020",
 		descriptions: [
-			"Implemented the settings, insights, and reports pages for the Cress mobile app using React Native.",
-			"Created a user-facing dashboard tool using React.js, Express, & Azure Cosmos DB.",
-			"Led a team of 6 interns in designing and implementing an internal portal using React.js, Express, & Azure Cosmos.",
+			"Implemented the settings, insights, and reports pages in React Native for the Cress iOS app, in use by a healthcare system with 10K+ employees.",
+			"Created an admin dashboard tool using React.js, Express, & Azure Cosmos to display and track employee wellness.",
+			"Led a team of 6 interns in designing and implementing a brand representative portal using React.js, Express, & Azure Cosmos.",
 		]
 	},
 	{
@@ -58,7 +58,7 @@ export const experiences = [
 		title: "AI Engineer Intern",
 		dates: "Jun. 2019 - Aug. 2019",
 		descriptions: [
-			"Added simultaneous multi-camera video capture and object detection functionality to internal software using Python, Kivy, & OpenCV.",
+			"Added multi-camera video capture and object detection functionality to internal software using Python, Kivy, & OpenCV, in order to enable virtual image reconstruction.",
 			"Helped implement a Q-learning algorithm in Python.",
 			"Created and scripted 10+ 3D VR-ready models with C#.",
 		]
@@ -90,10 +90,10 @@ export const activities = [
 export const projects = [
 	{
 		title: "Optical Music Recognition",
-		description: "A program that produced MIDI files from images of sheet music, made by combining traditional computer vision algorithms with deep learning techniques."
+		description: "A Python program that used Hough Circle Transform, bounding box detection, and a CNN to produce MIDI files from images of sheet music."
 	},
 	{
 		title: "The Admiral",
-		description: "An online multiplayer game that combines classic elements of exploration and racing games with those of social deception games, set in a procedurally-generated underwater world."
+		description: "An online multiplayer game combining elements of exploration and social deception, set in a procedurally-generated underwater world created using the Marching Cubes, Perlin Worms, and Boids algorithms."
 	}
 ]
