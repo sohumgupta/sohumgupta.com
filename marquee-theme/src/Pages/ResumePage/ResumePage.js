@@ -30,8 +30,8 @@ class ResumePage extends React.Component {
 		);
 	}
 
-	renderTechnologies() { return skills.technologies.map((s) => <div className="resume-skill resume-technology">{s}</div>); }
-	renderSoftware() { return skills.software.map((s) => <div className="resume-skill resume-software">{s}</div>); }
+	renderTechnologies() { return skills.technologies.map((s) => <div className="resume-skill resume-technology"><a target="_blank" rel="noopener noreferrer" href={s.navigation}>{s.label}</a></div>); }
+	renderSoftware() { return skills.software.map((s) => <div className="resume-skill resume-software"><a target="_blank" rel="noopener noreferrer" href={s.navigation}>{s.label}</a></div>); }
 
 	renderCourses() { return courses.map((c) => <div className="resume-course"><div className="separator"/>{c}</div>); }
 

@@ -178,6 +178,7 @@
 		margin: 0 .25em;
 	}
 
+	a { text-decoration: none; color: inherit; }
 	.resume-technology { border-bottom: .25vh solid rgba($accent-color, 1); @media print { border-bottom-width: .125vh }; }
 	.resume-software { border-bottom: .25vh solid rgba($dark-color, 0.6); @media print { border-bottom-width: .125vh }; }
 }
