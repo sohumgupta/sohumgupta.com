@@ -1,0 +1,101 @@
+@import '../../Main.scss';
+
+.header-wrapper {
+	width: 100%;
+	height: 10vh;
+
+	padding: 4vh 12vh 0vh 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.header-logo {
+		height: 100%;
+		width: fit-content;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:hover .logo-plus .plus-vertical { height: 0; }
+
+		&:hover .logo-text {
+			.logo-s { width: 3.75em; }
+			.logo-g { width: 5em; }
+		}
+
+		.logo-plus {
+			align-self: flex-start;
+			height: 2vh;
+			width: 2vh;
+			position: relative;
+
+			$plus-thickness: 30%;
+
+			.plus-vertical, .plus-horizontal { 
+				position: absolute; 
+				background-color: black;
+				margin: auto;
+				height: 100%; width: 100%;
+				top: 0; left: 0; bottom: 0; right: 0;
+			}
+
+			.plus-vertical { width: $plus-thickness; transition: height ease 0.25s; }
+			.plus-horizontal { height: $plus-thickness; }
+		}
+
+		.logo-text {
+			font-size: 2em;
+			line-height: 0.8em;
+			margin-top: 2.5vh;
+			margin-left: -0.5vh;
+			font-family: $display-font;
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+
+			p { 
+				margin: 0; 
+				overflow-x: hidden;
+				overflow-y: visible !important;
+				padding-bottom: .5em;
+				color: $accent-color;
+				&::first-letter { color: black; }
+			}
+
+			.logo-s { width: 0.65em; }
+			.logo-g { width: 0.75em; }
+		}
+	}
+
+	.header-links {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 2em;
+		cursor: pointer;
+
+		a { text-decoration: none; }
+
+		.header-link {
+			font-size: 1.25em;
+			position: relative;
+			color: black;
+
+			&:hover { &:after { width: 100%; transition: width 0.25s ease; } }
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 0; height: .25em;
+				background-color: black;
+				bottom: -0.25em; left: 0;
+				transition: width 0.25s ease;
+			}
+		}
+
+		.active { color: $accent-color; &:after { background-color: $accent-color; } }
+	}
+}

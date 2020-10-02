@@ -1,0 +1,39 @@
+@import '../../Main.scss';
+
+.intro-wrapper {
+	width: 100%;
+	height: 90vh;
+	margin-top: -10vh;
+	padding: 0 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.intro-text-wrapper {
+		width: 60%;
+		height: 40%;
+		padding: 5vh;
+		position: relative;
+
+		$border-size: 1vh;
+
+		.intro-border {
+			position: absolute;
+			width: $border-size; height: $border-size;
+			background-color: black;
+		}
+
+		.left-border, .right-border { height: calc(#{$border-size} * 3); }
+		.top-border, .bottom-border { width: calc(#{$border-size} * 3); }
+
+		.left-border { top: $border-size; left: calc(#{$border-size} * 2); }
+		.right-border { bottom: $border-size; right: calc(#{$border-size} * 2); }
+		.top-border { top: calc(#{$border-size} * 2); left: $border-size; }
+		.bottom-border { bottom: calc(#{$border-size} * 2); right: $border-size; }
+
+		&:hover { 
+			.left-border, .right-border { height: calc(100% - (#{$border-size} * 2)); }
+			.top-border, .bottom-border { width: calc(100% - (#{$border-size} * 2)); }
+		}
+	}
+}

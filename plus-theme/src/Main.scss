@@ -1,31 +1,23 @@
-// @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
-// @font-face {
-// 	font-family: 'Laguna Creek';
-// 	src: local('LagunaCreek'), url('./Assets/Fonts/LagunaCreek.otf') format('opentype');
-// }
+$display-font: 'Manrope', sans-serif;
+$main-font: 'Manrope', sans-serif;
 
-// @font-face {
-// 	font-family: 'Apercu Mono';
-// 	src: local('Apercu Mono'), url('./Assets/Fonts/ApercuMono.ttf') format('truetype');
-// }
+$dark-color: #000000;
+$accent-color: #FF822F;
 
-$display-font: 'Arial', sans-serif;
-$main-font: 'Arial', sans-serif;
-
-$dark-color: black;
-$accent-color: blue;
-
-
-#root, .body {
-	width: 100%;
-	height: 100%;
+body, #root, .body {
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
-	overscroll-behavior: contain;
+	overscroll-behavior: none;
+	cursor: cell;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: all 0.25s ease;
+	font-family: $main-font;
 }
