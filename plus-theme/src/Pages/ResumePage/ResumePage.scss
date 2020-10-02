@@ -1,0 +1,266 @@
+@import '../../Main.scss';
+
+@mixin center-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.resume-page {
+	width: 100vw;
+	height: fit-content;
+	min-height: 100vh;
+	@include center-content();
+	
+	background: $dark-color;
+
+	.resume-wrapper {
+		height: fit-content;
+		min-height: 100vh;
+		width: 100vw;
+		padding: 2em;
+
+		background: white;
+
+		@include center-content();
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 1.5em;
+	}
+}
+
+.resume-header {
+	width: 100%;
+	height: fit-content;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	position: relative;
+
+	@media print {
+		justify-content: flex-start;
+	}
+
+	.resume-name {
+		font-family: $display-font;
+		color: $accent-color;
+		font-size: Min(4em, 10vw);
+		line-height: 0.8em;
+		height: 0.8em;
+	}
+
+	.resume-links {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: 1fr 1fr;
+		gap: 0 1em;
+
+		.resume-link {
+			display: grid;
+			grid-template-columns: 1em min-content;
+			font-size: 0.9em;
+			gap: 0.5em;
+
+			label {
+				@include center-content();
+				font-family: $main-font;
+				color: $accent-color;
+			}
+
+			a {
+				@include center-content();
+				justify-content: flex-start;
+				font-family: $main-font;
+				text-decoration: none;
+				color: $dark-color;
+				border-bottom: .1em solid $accent-color;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.header-separators {
+	@include center-content();
+	width: 100%;
+	gap: 1em;
+
+	.separator { width: 20%; height: .5em; }
+	:nth-child(2) { background: $accent-color; }
+}
+
+.separator {
+	width: 20%;
+	border: .05em solid $accent-color;
+	transform: skew(-15deg);
+	height: 0.333em;
+}
+
+.resume-content {
+	width: 100%;
+	height: fit-content;
+
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	gap: 2em;
+
+	@media print { gap: 1em; }
+
+	.resume-left, .resume-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 1em;
+		
+		@media print { gap: 0.5em; }
+	}
+}
+
+@media screen {
+	.resize {
+		.resume-content {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+		.resume-header { flex-direction: column; }
+	}
+}
+
+.resume-section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	font-family: $main-font;
+	font-weight: normal;
+	font-size: 1em;
+	margin-bottom: 1em;
+
+	@media print { font-size: 10pt; }
+
+	.resume-section-header {
+		font-family: $main-font;
+		font-weight: bold;
+		font-size: 1.5em;
+
+		@media print { font-size: 12pt; }
+	
+		.separator {
+			width: 2em;
+			height: 0.25em;
+			margin-top: 0.25em;
+			margin-bottom: 0.5em;
+			background: $accent-color;
+		}
+	}
+
+	.accented {
+		background: none;
+		font-weight: bold;
+		color: $accent-color;
+	}
+}
+
+.resume-skills {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5em;
+
+	.resume-skill {
+		@media print { font-size: 10pt; }
+		margin: 0 .25em;
+	}
+
+	a { text-decoration: none; color: inherit; }
+	.resume-technology { border-bottom: .25vh solid rgba($accent-color, 1); @media print { border-bottom-width: .125vh }; }
+	.resume-software { border-bottom: .25vh solid rgba($dark-color, 0.6); @media print { border-bottom-width: .125vh }; }
+}
+
+.resume-course {
+	font-size: 0.7em;
+	margin-bottom: .25em;
+	display: flex;
+	font-weight: normal;
+
+	@media print { font-size: 10pt; }
+
+	.separator { 
+		width: 0.5em !important; min-width: 0.5em; max-width: 0.5em;
+		margin-top: 0.5em !important; 
+		margin-right: .5em; 
+	}
+}
+
+.resume-experiences, .resume-activities {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	.resume-experience, .resume-activity {
+		display: flex;
+		flex-direction: column;
+
+		font-size: 0.75em;
+	
+		.resume-experience-heading, .resume-activity-heading { 
+			@media print { font-size: 11pt; }
+
+			font-weight: normal; 
+			font-size: 1em;
+			color: $accent-color;
+			.bolded { background: none; font-weight: bold; color: $accent-color; }
+		}
+	
+		.resume-experience-date, .resume-activity-date {
+			@media print { font-size: 10pt; }
+
+			color: rgba($dark-color, 0.5);
+			font-size: 0.8em;
+		}
+	
+		.resume-experience-descriptions, .resume-activity-descriptions {
+			margin-top: 0.25em;
+			display: flex;
+			flex-direction: column;
+	
+			.resume-experience-description, .resume-activity-description {
+				@media print { font-size: 10pt; }
+
+				display: flex;
+				flex-direction: row;
+				font-size: 0.8em;
+				font-weight: normal;
+	
+				.separator { width: 0.5em; min-width: 0.5em; max-width: 0.5em; margin-top: 0.5em; margin-right: 0.5em;}
+	
+				
+			}
+		}
+	}
+}
+
+.resume-projects {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	.resume-project {
+		font-weight: normal;
+		font-size: 0.6em;
+
+		@media print { font-size: 10pt; }
+
+		.resume-project-title { 
+			background: none;
+			font-weight: bold;
+			color: $accent-color;
+		}
+	}
+}

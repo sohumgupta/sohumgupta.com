@@ -2,7 +2,8 @@ import * as React from 'react';
 import '../../Main.scss';
 import './ResumePage.scss';
 
-import { links, experiences, skills, courses, activities, projects } from './ResumeInfo';
+//import { links, experiences, skills, courses, activities, projects } from './ResumeInfo';
+import { links, experiences, skills, courses, activities, projects } from './ExtraResumes/WebDevResumeInfo';
 
 const resizeRatio = 1;
 
