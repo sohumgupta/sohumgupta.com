@@ -37,8 +37,4 @@ class Header extends React.Component {
 	}
 }
 
-Header.defaultProps = {
-	active: "Work"
-}
-
 export default Header;

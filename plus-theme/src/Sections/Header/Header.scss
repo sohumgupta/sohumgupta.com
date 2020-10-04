@@ -17,7 +17,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		&:hover .logo-plus .plus-vertical { height: 0; }
+		&:hover .logo-plus { .plus-vertical { height: 0 } }
 
 		&:hover .logo-text {
 			.logo-s { width: 3.75em; }
@@ -46,6 +46,7 @@
 
 		.logo-text {
 			font-size: 2em;
+			font-weight: bold;
 			line-height: 0.8em;
 			margin-top: 2.5vh;
 			margin-left: -0.5vh;
@@ -81,6 +82,7 @@
 
 		.header-link {
 			font-size: 1.25em;
+			font-weight: bold;
 			position: relative;
 			color: black;
 

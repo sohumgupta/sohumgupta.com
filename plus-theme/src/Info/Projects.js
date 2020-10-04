@@ -6,32 +6,36 @@ import OMR from '../Assets/ProjectPictures/OMR/OMR.png';
 import TwistMuseum from '../Assets/ProjectPictures/TwistMuseum/TwistDetailPicture.png';
 import Comics from '../Assets/ProjectPictures/Comics/ComicsPicture.png';
 
-const projects = [
-	{
+const sections = [
+	{ section: "Coding Projects", projects: [
+		{
 		title: "The Admiral",
 		image: Admiral,
 		navigation: "/admiral"
-	},
-	{
-		title: "Optical Music Recognition",
-		image: OMR,
-		navigation: "/dailymidi"
-	},
-	{
-		title: "Aroma",
-		image: Aroma,
-		navigation: "/aroma"
-	},
-	{
-		title: "The Twist Museum",
-		image: TwistMuseum,
-		navigation: "/twistmuseum"
-	},
-	{
-		title: "Comics",
-		image: Comics,
-		navigation: "/comics"
-	},
+		},
+		{
+			title: "Optical Music Recognition",
+			image: OMR,
+			navigation: "/dailymidi"
+		},
+		{
+			title: "Aroma",
+			image: Aroma,
+			navigation: "/aroma"
+		}
+	]},
+	{ section: "Personal Projects", projects: [
+		{
+			title: "The Twist Museum",
+			image: TwistMuseum,
+			navigation: "/twistmuseum"
+		},
+		{
+			title: "Comics",
+			image: Comics,
+			navigation: "/comics"
+		},
+	]}
 ];
 
-export default projects;
+export default sections;

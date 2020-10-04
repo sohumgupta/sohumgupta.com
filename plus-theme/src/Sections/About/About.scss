@@ -1,0 +1,59 @@
+@import '../../Main.scss';
+
+.about-wrapper {
+	width: 100%;
+	height: 80vh;
+	padding: 0 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.about-text-wrapper {
+		margin-top: -5vh;
+		width: 100vh;
+		height: fit-content;
+		padding: 8vh;
+		position: relative;
+
+		$border-size: 0.8vh;
+
+		.about-borders {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0; left: 0;
+
+			.about-border {
+				position: absolute;
+				width: $border-size; height: $border-size;
+				background-color: black;
+			}
+	
+			.left-border, .right-border { height: calc(#{$border-size} * 3); }
+			.top-border, .bottom-border { width: calc(#{$border-size} * 3); }
+	
+			.left-border { top: $border-size; left: calc(#{$border-size} * 2); }
+			.right-border { bottom: $border-size; right: calc(#{$border-size} * 2); }
+			.top-border { top: calc(#{$border-size} * 2); left: $border-size; }
+			.bottom-border { bottom: calc(#{$border-size} * 2); right: $border-size; }
+	
+			&:hover { 
+				.left-border, .right-border { height: calc(100% - (#{$border-size} * 2)); }
+				.top-border, .bottom-border { width: calc(100% - (#{$border-size} * 2)); }
+			}
+		}
+
+		.about-title {
+			font-size: 3em;
+			line-height: 0.9em;
+			margin-bottom: .5em;
+			font-weight: bold;
+		}
+
+		.about-text {
+			font-weight: normal;
+			text-align: justify;
+		}
+		
+	}
+}

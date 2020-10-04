@@ -1,17 +1,13 @@
 import * as React from 'react';
-import './MainPage.scss';
-
-import experiences from '../../Info/Experience';
+import './AboutPage.scss';
 
 import Header from '../../Sections/Header/Header';
 import About from '../../Sections/About/About';
-import Projects from '../../Sections/Projects/Projects';
-
-import { FaChevronDown } from 'react-icons/fa'
+import Footer from '../../Sections/Footer/Footer';
 
 const resizeRatio = 1.333;
 
-class MainPage extends React.Component {
+class AboutPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
@@ -31,16 +27,13 @@ class MainPage extends React.Component {
 		const resize = (aspectRatio < resizeRatio);
 
 		return (
-			<div className="main-page">
-				<Header resize={resize} active="Work"/>
+			<div className="about-page">
+				<Header resize={resize} active="About"/>
 				<About resize={resize}/>
-				<div className="scroll-down" onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}>
-					Learn More <FaChevronDown/>
-				</div>
-				<Projects resize={resize}/>
+				<Footer resize={resize}/>
 			</div>
 		)
 	}
 }
 
-export default MainPage;
+export default AboutPage;

@@ -47,9 +47,14 @@
 	.resume-name {
 		font-family: $display-font;
 		color: $accent-color;
-		font-size: Min(4em, 10vw);
-		line-height: 0.8em;
+		font-weight: bold;
+		font-size: Min(3em, 10vw);
+		line-height: 0.65em;
 		height: 0.8em;
+
+		@media print {
+			font-size: 48px;
+		}
 	}
 
 	.resume-links {
@@ -88,15 +93,13 @@
 	width: 100%;
 	gap: 1em;
 
-	.separator { width: 20%; height: .5em; }
+	.separator { width: 20%; height: 0.5em; }
 	:nth-child(2) { background: $accent-color; }
 }
 
 .separator {
 	width: 20%;
 	border: .05em solid $accent-color;
-	transform: skew(-15deg);
-	height: 0.333em;
 }
 
 .resume-content {
@@ -153,7 +156,7 @@
 	
 		.separator {
 			width: 2em;
-			height: 0.25em;
+			height: 0.35vh;
 			margin-top: 0.25em;
 			margin-bottom: 0.5em;
 			background: $accent-color;
@@ -193,8 +196,13 @@
 
 	.separator { 
 		width: 0.5em !important; min-width: 0.5em; max-width: 0.5em;
+		height: 0.35vh !important;
 		margin-top: 0.5em !important; 
 		margin-right: .5em; 
+
+		@media print {
+			height: 0.2vh !important;
+		}
 	}
 }
 
@@ -238,9 +246,13 @@
 				font-size: 0.8em;
 				font-weight: normal;
 	
-				.separator { width: 0.5em; min-width: 0.5em; max-width: 0.5em; margin-top: 0.5em; margin-right: 0.5em;}
-	
-				
+				.separator { 
+					height: 0.2em; 
+					width: 0.5em; min-width: 0.5em; max-width: 0.5em;
+					margin-top: 0.5em; margin-right: 0.5em;
+
+					@media print { margin-top: 0.6em; }
+				}
 			}
 		}
 	}

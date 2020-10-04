@@ -15,24 +15,17 @@ export const skills = {
 		{label: "JavaScript", navigation: "https://www.javascript.com"},
 		{label: "TypeScript", navigation: "https://www.typescriptlang.org/"},
 		{label: "React.js", navigation: "https://reactjs.org/"},
-		{label: "Redux", navigation: "https://redux.js.org/"},
 		{label: "Express", navigation: "https://expressjs.com/"},
-		{label: "Node.js", navigation: "https://nodejs.org/en/"},
 		{label: "Java", navigation: "https://www.java.com/en/"},
-		{label: "Scala", navigation: "https://www.scala-lang.org/"},
 		{label: "Python", navigation: "https://www.python.org/"},
 		{label: "C#", navigation: "https://docs.microsoft.com/en-us/dotnet/csharp/"},
 		{label: "C", navigation: "https://devdocs.io/c/"},
-		{label: "ReasonML", navigation: "https://reasonml.github.io/"},
-		{label: "OCaml", navigation: "https://ocaml.org/"},
 	],
 	software: [
 		{label: "Adobe XD", navigation: "https://www.adobe.com/products/xd.html"},
 		{label: "Figma", navigation: "https://www.figma.com/"},
 		{label: "Adobe Photoshop", navigation: "https://www.adobe.com/products/photoshop.html"},
 		{label: "Adobe Illustrator", navigation: "https://www.adobe.com/products/illustrator.html"},
-		{label: "Microsoft Powerpoint", navigation: "https://www.microsoft.com/en-us/microsoft-365/powerpoint"},
-		{label: "Microsoft Excel", navigation: "https://www.microsoft.com/en-us/microsoft-365/excel"},
 	]
 }
 
