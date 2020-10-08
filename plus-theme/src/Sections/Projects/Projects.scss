@@ -1,5 +1,14 @@
 @import '../../Main.scss';
 
+.projects-resize { 
+	padding: 8vh 10vw !important;
+
+	.project-info-wrapper {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+}
+
 .projects-section-wrapper {
 	width: 100%;
 	height: fit-content;

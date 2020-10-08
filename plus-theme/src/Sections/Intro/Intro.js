@@ -5,8 +5,9 @@ import { ReactComponent as PictureOutline } from '../../Assets/PictureOutline.sv
 
 class Intro extends React.Component {
 	render() {
+		const resizeClass = this.props.resize ? " intro-resize" : ""
 		return (
-			<div className="intro-wrapper">
+			<div className={"intro-wrapper" + resizeClass}>
 				<div className="intro-text-wrapper">
 					<div className="intro-title">Hi, I'm Sohum Gupta :)</div>
 					<div className="intro-text">

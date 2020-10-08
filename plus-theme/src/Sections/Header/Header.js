@@ -19,8 +19,10 @@ class HeaderLink extends React.Component {
 
 class Header extends React.Component {
 	render() {
+		const resizeClass = this.props.resize ? " header-resize" : ""
+
 		return (
-			<div className="header-wrapper">
+			<div className={"header-wrapper" + resizeClass}>
 				<div className="header-logo">
 					<div className="logo-plus">
 						<div className="plus-vertical"/>

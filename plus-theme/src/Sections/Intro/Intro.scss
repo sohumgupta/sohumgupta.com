@@ -1,5 +1,21 @@
 @import '../../Main.scss';
 
+.intro-resize { 
+	height: 75vh !important;
+
+	.intro-title { font-size: 2.5em !important; }
+
+	.intro-picture {
+		height: Max(65vh, fit-content) !important;
+		top: auto !important;
+
+		svg { 
+			width: 100%;
+			height: auto; 
+		}
+	}
+}
+
 .intro-wrapper {
 	width: 100%;
 	height: 80vh;

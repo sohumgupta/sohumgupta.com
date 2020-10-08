@@ -5,10 +5,11 @@ import AboutPicture from '../../Assets/AboutPicture.jpg';
 
 class About extends React.Component {
 	render() {
+		const resizeClass = this.props.resize ? " about-resize" : ""
 		return (
-			<div className="about-wrapper">
+			<div className={"about-wrapper" + resizeClass}>
 				<div className="about-inner-wrapper">
-					<img className="about-image" src={AboutPicture}/>
+					<img className="about-image" alt="Me!" src={AboutPicture}/>
 					<div className="about-text-wrapper">
 						<div className="about-title">About Me</div>
 						<div className="about-text">

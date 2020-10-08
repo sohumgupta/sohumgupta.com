@@ -57,8 +57,9 @@ class Projects extends React.Component {
 	}
 
 	render() {
+		const resizeClass = this.props.resize ? " projects-resize" : ""
 		return (
-			<div className="projects-section-wrapper">
+			<div className={"projects-section-wrapper" + resizeClass}>
 				{this.renderSections()}
 			</div>
 		)

@@ -1,16 +1,26 @@
 @import '../../Main.scss';
 
+.about-resize { 
+	height: fit-content !important;
+	margin-bottom: 8vh;
+	margin-top: 4vh;
+
+	.about-inner-wrapper {
+		margin-top: 0vh !important;
+		flex-direction: column;
+	}
+}
+
 .about-wrapper {
 	width: 100%;
 	height: 80vh;
 	display: flex;
-	padding: 0 12vh;
+	padding: 0 10vw;
 	align-items: center;
 	justify-content: center;
 
 	.about-inner-wrapper {
 		margin-top: -5vh;
-		width: 75%;
 		height: fit-content;
 		padding: 8vh;
 		position: relative;
