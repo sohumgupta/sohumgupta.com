@@ -4,7 +4,8 @@ import './MainPage.scss';
 import experiences from '../../Info/Experience';
 
 import Header from '../../Sections/Header/Header';
-import About from '../../Sections/About/About';
+import Footer from '../../Sections/Footer/Footer';
+import Intro from '../../Sections/Intro/Intro';
 import Projects from '../../Sections/Projects/Projects';
 
 import { FaChevronDown } from 'react-icons/fa'
@@ -32,12 +33,14 @@ class MainPage extends React.Component {
 
 		return (
 			<div className="main-page">
+				<div className="page-wipe"></div>
 				<Header resize={resize} active="Work"/>
-				<About resize={resize}/>
+				<Intro resize={resize}/>
 				<div className="scroll-down" onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}>
 					Learn More <FaChevronDown/>
 				</div>
 				<Projects resize={resize}/>
+				<Footer resize={resize}/>
 			</div>
 		)
 	}

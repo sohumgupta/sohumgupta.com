@@ -4,6 +4,8 @@ $display-font: 'Manrope', sans-serif;
 $main-font: 'Manrope', sans-serif;
 
 $dark-color: #000000;
+$light-color: #e2e2e2;
+$medium-color: #808080;
 $accent-color: #FF822F;
 
 body, #root {
@@ -20,6 +22,35 @@ body, #root {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	transition: all 0.25s ease;
 	font-family: $main-font;
+}
+
+$transition-length: 250ms;
+$transition-delay: 0ms;
+
+/* SWIPE ANIMATION */
+.swipe-appear, .swipe-enter {
+	position: fixed;
+	background: white;
+	height: 100vh; width: 100vw;
+	top: 0; left: -100vw;
+	z-index: 5;
+}
+
+.swipe-appear-active, .swipe-enter.swipe-enter-active {
+	left: 0;
+	transition: left $transition-length linear $transition-delay;
+
+	.page-wipe {
+		left: 150vw;
+		transition: left ($transition-length * 2) linear $transition-delay;
+	}
+}
+
+.page-wipe {
+	position: fixed;
+	height: 100vh; width: 150vw;
+	top: 0; left: -150vw;
+	background: black;
+	z-index: 10;
 }

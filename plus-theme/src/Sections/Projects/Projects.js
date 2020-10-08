@@ -9,16 +9,29 @@ class Project extends React.Component {
 		this.state = { open: false }
 	}
 
+	renderTags() { return this.props.tags.map((t) => <p className="project-tag">{t}</p>) }
+	renderLinks() { 
+		return this.props.links.map((l) => 
+		<a className="project-link" target="_blank" rel="noopener noreferrer" href={l.navigation}>{l.icon}{l.label}</a>
+	) }
+
 	render() {
-		console.log(this.state.open)
 		return (
-			<div className={"project-wrapper" + (this.state.open ? " open" : "")} onClick={() => this.setState({open: !this.state.open})}>
-				<div className="project-header">
+			<div className={"project-wrapper" + (this.state.open ? " open" : "")}>
+				<div className="project-header" onClick={() => this.setState({open: !this.state.open})}>
 					{this.props.title}
 					<div className={"project-plus" + (this.state.open ? " expanded" : "")}>
 						<div className="plus-vertical"></div>
 						<div className="plus-horizontal"></div>
 					</div>
+				</div>
+				<div className="project-info-wrapper">
+					<div className="project-main">
+						<p className="project-subtitle">{this.props.subtitle}</p>
+						<div className="project-tags">{this.renderTags()}</div>
+						<div className="project-links">{this.renderLinks()}</div>
+					</div>
+					<div className="project-description">{this.props.description}</div>
 				</div>
 			</div>
 		)
@@ -27,7 +40,7 @@ class Project extends React.Component {
 
 class Projects extends React.Component {
 	renderProjects(projects) {
-		return projects.map((p) => <Project title={p.title}/>)
+		return projects.map((p) => <Project title={p.title} subtitle={p.subtitle} description={p.description} tags={p.tags} links={p.links}/>)
 	}
 
 	renderSections() {

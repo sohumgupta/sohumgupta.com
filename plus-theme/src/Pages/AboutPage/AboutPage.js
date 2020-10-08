@@ -28,6 +28,7 @@ class AboutPage extends React.Component {
 
 		return (
 			<div className="about-page">
+				<div className="page-wipe"></div>
 				<Header resize={resize} active="About"/>
 				<About resize={resize}/>
 				<Footer resize={resize}/>

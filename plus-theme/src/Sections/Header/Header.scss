@@ -34,7 +34,7 @@
 
 			.plus-vertical, .plus-horizontal { 
 				position: absolute; 
-				background-color: black;
+				background-color: $dark-color;
 				margin: auto;
 				height: 100%; width: 100%;
 				top: 0; left: 0; bottom: 0; right: 0;
@@ -63,7 +63,9 @@
 				overflow-y: visible !important;
 				padding-bottom: .5em;
 				color: $accent-color;
-				&::first-letter { color: black; }
+				&::first-letter { color: $dark-color; }
+				transition: width 0.25s ease;
+				user-select: none;
 			}
 
 			.logo-s { width: 0.65em; }
@@ -84,7 +86,8 @@
 			font-size: 1.25em;
 			font-weight: bold;
 			position: relative;
-			color: black;
+			color: $dark-color;
+			user-select: none;
 
 			&:hover { &:after { width: 100%; transition: width 0.25s ease; } }
 
@@ -92,7 +95,7 @@
 				content: '';
 				position: absolute;
 				width: 0; height: .25em;
-				background-color: black;
+				background-color: $dark-color;
 				bottom: -0.25em; left: 0;
 				transition: width 0.25s ease;
 			}

@@ -78,6 +78,7 @@ class ResumePage extends React.Component {
 
 		return (
 			<div className="resume-page">
+				<div className="page-wipe"></div>
 				<div className={"resume-wrapper" + (resize ? " resize" : "")}>
 					<div className="resume-header">
 						<div className="resume-name">

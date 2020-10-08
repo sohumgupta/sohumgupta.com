@@ -5,11 +5,15 @@ import { Link } from 'react-router-dom';
 
 class HeaderLink extends React.Component {
 	render() {
-		return (
-			<Link to={this.props.navigation}>
-				<div className={"header-link" + (this.props.active ? " active": "")}>{this.props.label}</div>
-			</Link>
-		)
+		if (this.props.active) {
+			return <div className={"header-link" + (this.props.active ? " active": "")}>{this.props.label}</div>
+		} else {
+			return (
+				<Link to={this.props.navigation}>
+					<div className={"header-link" + (this.props.active ? " active": "")}>{this.props.label}</div>
+				</Link>
+			)
+		}
 	}
 }
 
@@ -28,9 +32,9 @@ class Header extends React.Component {
 					</div>
 				</div>
 				<div className="header-links">
-					<HeaderLink label="Work" navigation="/" active={this.props.active == "Work"}/>
-					<HeaderLink label="About" navigation="/about" active={this.props.active == "About"}/>
-					<HeaderLink label="Resume" navigation="/resume" active={this.props.active == "Resume"}/>
+					<HeaderLink label="Work" navigation="/" active={this.props.active === "Work"}/>
+					<HeaderLink label="About" navigation="/about" active={this.props.active === "About"}/>
+					<HeaderLink label="Resume" navigation="/resume" active={this.props.active === "Resume"}/>
 				</div>
 			</div>
 		)
