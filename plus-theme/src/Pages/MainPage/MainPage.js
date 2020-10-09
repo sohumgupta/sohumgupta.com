@@ -1,12 +1,11 @@
 import * as React from 'react';
 import './MainPage.scss';
 
-import experiences from '../../Info/Experience';
-
 import Header from '../../Sections/Header/Header';
 import Footer from '../../Sections/Footer/Footer';
 import Intro from '../../Sections/Intro/Intro';
 import Projects from '../../Sections/Projects/Projects';
+import Experience from '../../Sections/Experience/Experience';
 
 import { FaChevronDown } from 'react-icons/fa'
 
@@ -39,6 +38,7 @@ class MainPage extends React.Component {
 				<div className="scroll-down" onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}>
 					Learn More <FaChevronDown/>
 				</div>
+				<Experience resize={resize}/>
 				<Projects resize={resize}/>
 				<Footer resize={resize}/>
 			</div>

@@ -1,34 +1,34 @@
 @import '../../Main.scss';
 
-.projects-resize { 
+.experience-resize { 
 	padding: 8vh 10vw !important;
-	padding-top: 6vh !important;
+	padding-bottom: 0 !important;
 
-	.project-info-wrapper {
+	.experience-info-wrapper {
 		display: flex !important;
 		flex-direction: column !important;
 	}
 }
 
-.projects-section-wrapper {
+.experience-section-wrapper {
 	width: 100%;
 	height: fit-content;
 
 	padding: 8vh 24vh;
-	padding-top: 6vh !important;
+	padding-bottom: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	gap: 6vh;
 
-	.projects-section {
+	.experience-section {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 3vh;
 
-		.projects-section-header {
+		.experience-section-header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -51,7 +51,7 @@
 			}		
 		}
 
-		.projects-wrapper {
+		.experience-wrapper {
 			width: 100%;
 			height: fit-content;
 			display: flex;
@@ -60,28 +60,28 @@
 			justify-content: flex-end;
 
 			.open {
-				.project-info-wrapper { 
+				.experience-info-wrapper { 
 					height: auto !important;
 					padding: 4vh !important;
 				}
 			}
 
-			.project-wrapper {
+			.experience-wrapper {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 
 				&:hover {
-					.project-header { 
+					.experience-header { 
 						color: $accent-color; 
 						border-bottom-color: $accent-color;
 						&:after { background: $accent-color !important; }
 					}
 	
-					.project-plus { .plus-vertical, .plus-horizontal { background: $accent-color !important; }}
+					.experience-plus { .plus-vertical, .plus-horizontal { background: $accent-color !important; }}
 				}
 
-				.project-header {
+				.experience-header {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
@@ -94,7 +94,7 @@
 					padding-bottom: 0.25em;
 					border-bottom: 0.7vh solid black;
 
-					.project-plus {
+					.experience-plus {
 						height: 2vh;
 						width: 2vh;
 						position: relative;
@@ -116,7 +116,7 @@
 					.expanded .plus-vertical { height: 0 }
 				}
 
-				.project-info-wrapper {
+				.experience-info-wrapper {
 					display: grid;
 					grid-template-columns: 1fr 2fr;
 					gap: 4vh;
@@ -128,28 +128,36 @@
 					height: 0;
 					overflow: hidden;
 
-					.project-main {
+					.experience-main {
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
 						justify-content: flex-start;
-						gap: 2vh;
+						gap: 1vh;
 
-						.project-subtitle {
+						.experience-title {
 							font-size: 1.25em;
 							font-weight: bold;
+							color: $dark-color;
+							user-select: none;
+						}
+
+						.experience-dates {
+							font-size: 1em;
+							font-weight: normal;
 							color: $medium-color;
 							user-select: none;
 						}
 
-						.project-tags {
+						.experience-tags {
+							margin-top: 1vh;
 							display: flex;
 							flex-direction: row;
 							align-items: center;
 							justify-content: flex-start;
 							gap: 1vh;
 
-							.project-tag {
+							.experience-tag {
 								font-size: 1em;
 								font-weight: bold;
 								background: $medium-color;
@@ -160,14 +168,14 @@
 							}
 						}
 
-						.project-links {
+						.experience-links {
 							display: flex;
 							flex-direction: row;
 							align-items: center;
 							justify-content: flex-start;
-							gap: 1vh;
+							gap: 2vh;
 
-							.project-link {
+							.experience-link {
 								display: flex;
 								align-items: center;
 								justify-content: center;
@@ -188,7 +196,7 @@
 						}
 					}
 
-					.project-description {
+					.experience-description {
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;

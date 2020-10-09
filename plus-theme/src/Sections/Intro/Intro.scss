@@ -2,17 +2,10 @@
 
 .intro-resize { 
 	height: 75vh !important;
-
-	.intro-title { font-size: 2.5em !important; }
-
 	.intro-picture {
 		height: Max(65vh, fit-content) !important;
 		top: auto !important;
-
-		svg { 
-			width: 100%;
-			height: auto; 
-		}
+		svg {  width: 100%; height: auto; }
 	}
 }
 
@@ -36,14 +29,15 @@
 		$border-size: 0.8vh;
 
 		.intro-title {
-			font-size: 3em;
+			font-size: Min(8vw, 6vh);
 			line-height: 0.9em;
 			margin-bottom: .5em;
 			font-weight: bold;
+			white-space: nowrap;
 		}
 
 		.intro-text {
-			font-size: 1.25em;
+			font-size: Min(4vw, 3vh);
 			color: $medium-color;
 			text-align: justify;
 
