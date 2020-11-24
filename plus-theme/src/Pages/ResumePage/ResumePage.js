@@ -18,7 +18,6 @@ class ResumePage extends React.Component {
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
-	componentDidMount() { document.title = "sohum gupta | resume"; this.updateWindowDimensions(); window.addEventListener('resize', this.updateWindowDimensions); window.scrollTo(0, 0); }
 	componentWillUnmount() { window.removeEventListener('resize', this.updateWindowDimensions); }
 	updateWindowDimensions() { this.setState({ width: window.innerWidth, height: window.innerHeight }); }
 

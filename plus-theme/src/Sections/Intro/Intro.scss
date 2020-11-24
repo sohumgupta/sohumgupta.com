@@ -1,14 +1,5 @@
 @import '../../Main.scss';
 
-.intro-resize { 
-	height: 75vh !important;
-	.intro-picture {
-		height: Max(65vh, fit-content) !important;
-		top: auto !important;
-		svg {  width: 100%; height: auto; }
-	}
-}
-
 .intro-wrapper {
 	width: 100%;
 	height: 80vh;
@@ -74,5 +65,14 @@
 	
 			@keyframes draw { to { stroke-dashoffset: 0; } }
 		}
+	}
+}
+
+.intro-resize { 
+	height: 75vh;
+	.intro-picture svg {
+		height: auto; max-height: 100%; 
+		position: absolute;
+		top: auto; bottom: 0;
 	}
 }

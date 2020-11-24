@@ -1,0 +1,44 @@
+[debug] [2020-11-24T21:28:08.921Z] ----------------------------------------------------------------------
+[debug] [2020-11-24T21:28:08.923Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-11-24T21:28:08.923Z] CLI Version:   8.6.0
+[debug] [2020-11-24T21:28:08.923Z] Platform:      darwin
+[debug] [2020-11-24T21:28:08.923Z] Node Version:  v10.15.3
+[debug] [2020-11-24T21:28:08.924Z] Time:          Tue Nov 24 2020 15:28:08 GMT-0600 (Central Standard Time)
+[debug] [2020-11-24T21:28:08.924Z] ----------------------------------------------------------------------
+[debug] [2020-11-24T21:28:08.924Z] 
+[debug] [2020-11-24T21:28:08.938Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-24T21:28:08.939Z] > authorizing via signed-in user
+[debug] [2020-11-24T21:28:08.939Z] [iam] checking project sohum-gupta for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-24T21:28:08.941Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-24T21:28:08.941Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-11-24T21:28:09.149Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 24 Nov 2020 21:28:09 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-24T21:28:09.215Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/sohum-gupta:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-24T21:28:09.421Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 24 Nov 2020 21:28:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=92","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-24T21:28:09.422Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project sohum-gupta:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2020-11-24T21:28:09.423Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/sohum-gupta  
+ 
+[debug] [2020-11-24T21:28:09.620Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 24 Nov 2020 21:28:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-24T21:28:09.620Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-11-24T21:28:09.622Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-11-24T21:28:09.785Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:189:13)
+    at Request.EventEmitter.emit (domain.js:441:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:189:13)
+    at Request.EventEmitter.emit (domain.js:441:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:277:13)
+    at IncomingMessage.emit (events.js:194:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to get Firebase project sohum-gupta. Please make sure the project exists and your account has permission to access it.

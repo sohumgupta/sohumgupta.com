@@ -26,14 +26,13 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 3vh;
 
 		.experience-section-header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
-			margin-bottom: 0.5em;
+			margin-bottom: 5vh;
 	
 			width: 100%;
 			font-size: 2em;
@@ -43,11 +42,11 @@
 			&:after {
 				content: '';
 				position: absolute;
+				bottom: -0.5em; left: 0;
 				margin: auto;
 				width: 100%;
 				height: .25em;
 				background: $dark-color;
-				bottom: -0.5em;
 			}		
 		}
 
@@ -98,6 +97,7 @@
 						height: 2vh;
 						width: 2vh;
 						position: relative;
+						margin-left: 2vh;
 			
 						$plus-thickness: 30%;
 			
@@ -153,6 +153,7 @@
 							margin-top: 1vh;
 							display: flex;
 							flex-direction: row;
+							flex-wrap: wrap;
 							align-items: center;
 							justify-content: flex-start;
 							gap: 1vh;
@@ -171,6 +172,7 @@
 						.experience-links {
 							display: flex;
 							flex-direction: row;
+							flex-wrap: wrap;
 							align-items: center;
 							justify-content: flex-start;
 							gap: 2vh;
