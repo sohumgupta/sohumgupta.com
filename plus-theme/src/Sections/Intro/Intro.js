@@ -11,7 +11,7 @@ class Intro extends React.Component {
 				<div className="intro-text-wrapper">
 					<div className="intro-title">Hi, I'm Sohum Gupta :)</div>
 					<div className="intro-text">
-						Computer Science @ Brown University.
+						Computer Science @ Brown University. Incoming @ Amazon, previously @ Cress Health. 
 					</div>
 				</div>
 				<div className="intro-picture">
