@@ -30,12 +30,25 @@
 		.intro-text {
 			font-size: Min(4vw, 3vh);
 			color: $medium-color;
-			text-align: justify;
+			text-align: left;
 
-			mark {
-				background: none;
+			.intro-link {
 				color: inherit;
-				text-decoration: underline;
+				text-decoration: none;
+				position: relative;
+				cursor: pointer;
+				font-weight: 800;
+
+				&:hover { &:after { width: 100%; transition: width 0.25s ease; } }
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 0; height: .15em;
+					background-color: $medium-color;
+					bottom: -0.05em; left: 0;
+					transition: width 0.25s ease;
+				}
 			}
 		}
 	}
