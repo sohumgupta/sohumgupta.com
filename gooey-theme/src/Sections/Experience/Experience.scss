@@ -1,0 +1,230 @@
+@import '../../Main.scss';
+
+.experience-resize { 
+	padding: 8vh 10vw !important;
+	padding-bottom: 0 !important;
+
+	.experience-info-wrapper {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+}
+
+.experience-section-wrapper {
+	width: 100%;
+	height: fit-content;
+
+	padding: 8vh 24vh;
+	padding-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6vh;
+
+	.experience-section {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.experience-section-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+			margin-bottom: 5vh;
+	
+			width: 100%;
+			font-size: 2em;
+			font-weight: 900;
+			user-select: none;
+			font-family: $display-font;
+	
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -0.5em; left: 0;
+				margin: auto;
+				width: 100%;
+				height: .2em;
+				background: $dark-color;
+			}		
+		}
+
+		.experience-wrapper {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			overflow: hidden;
+
+			.open {
+				.experience-info-wrapper { 
+					height: auto !important;
+					padding: 4vh !important;
+				}
+			}
+
+			.experience-wrapper {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				&:hover {
+					.experience-header { 
+						color: $accent-color; 
+						border-bottom-color: $accent-color;
+						&:after { background: $accent-color !important; }
+					}
+	
+					.experience-plus { .plus-vertical, .plus-horizontal { background: $accent-color !important; }}
+				}
+
+				.experience-header {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					position: relative;
+					cursor: pointer;
+			
+					width: 100%;
+					font-size: 1.5em;
+					font-weight: 400;
+					font-family: $display-font;
+					user-select: none;
+					padding-bottom: 0.25em;
+					border-bottom: 0.5vh solid black;
+
+					.experience-plus {
+						height: 2vh;
+						width: 2vh;
+						position: relative;
+						margin-left: 2vh;
+			
+						$plus-thickness: 30%;
+			
+						.plus-vertical, .plus-horizontal { 
+							position: absolute; 
+							background-color: $dark-color;
+							margin: auto;
+							height: 100%; width: 100%;
+							top: 0; left: 0; bottom: 0; right: 0;
+						}
+			
+						.plus-vertical { width: $plus-thickness; transition: height ease 0.25s; }
+						.plus-horizontal { height: $plus-thickness; }
+					}
+
+					.expanded .plus-vertical { height: 0 }
+				}
+
+				.experience-info-wrapper {
+					display: grid;
+					grid-template-columns: 1fr 2fr;
+					gap: 4vh;
+
+					background: $light-color;
+					padding: 0;
+					width: 100%;
+					margin-bottom: 3vh;
+					height: 0;
+					overflow: hidden;
+					position: relative;
+
+					.experience-main {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-start;
+						gap: 1vh;
+						z-index: 1;
+
+						.experience-org {
+							font-size: 1.25em;
+							font-weight: bold;
+							color: $medium-color;
+							user-select: none;
+						}
+
+						.experience-dates {
+							font-size: 1em;
+							font-weight: normal;
+							color: $medium-color;
+							user-select: none;
+						}
+
+						.experience-tags {
+							margin-top: 1vh;
+							display: flex;
+							flex-direction: row;
+							flex-wrap: wrap;
+							align-items: center;
+							justify-content: flex-start;
+							gap: 1vh;
+
+							.experience-tag {
+								font-size: 1em;
+								font-weight: bold;
+								background: $medium-color;
+								color: $light-color;
+								padding: 0.25vh 0.75vh;
+								border-radius: .5vh;
+								user-select: none;
+							}
+						}
+
+						.experience-links {
+							display: flex;
+							flex-direction: row;
+							flex-wrap: wrap;
+							align-items: center;
+							justify-content: flex-start;
+							gap: 2vh;
+
+							.experience-link {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								gap: 1vh;
+
+								text-decoration: none;
+								font-size: 1em;
+								font-weight: bold;
+								background: $dark-color;
+								color: $light-color;
+								padding: 0.25vh 0.75vh;
+								border-radius: .5vh;
+								user-select: none;
+								transition: all 0.25s ease;
+
+								&:hover { background: $accent-color;}
+							}
+						}
+					}
+
+					.experience-description {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-start;
+						z-index: 1;
+
+						font-size: 1em;
+						text-align: justify;
+					}
+
+					.goo-wrapper {
+						position: absolute;
+						height: 50%;
+						width: 50%;
+						left: 0; top: 0;
+						transform: translateX(-35%) translateY(50%);
+						z-index: 0;
+					}
+				}
+			}
+		}
+	}
+}

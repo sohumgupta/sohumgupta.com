@@ -1,0 +1,53 @@
+@import '../../Main.scss';
+
+.goo-wrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@keyframes rotate-goo {
+		from { transform: rotate(0deg) translateX(2%) rotate(0deg); }
+		to   { transform: rotate(360deg) translateX(2%) rotate(-360deg); }
+	}
+
+	.goo-circle {
+		width: 80%;
+		border-radius: 50%;
+		position: absolute;
+		transform-origin: 60% 60%;
+
+		background: $light-accent-color;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		animation: rotate-goo;
+		animation-iteration-count: infinite;
+		animation-duration: 10s;
+		animation-timing-function: linear;
+
+		&:after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		&:nth-child(2) { 
+			width: (75 + random(10)) * 1%; 
+			margin-top: 5%; margin-right: 10%; 
+			animation-delay: #{(random(5) - 5)}s;
+			animation-direction: alternate;
+		}
+
+		&:nth-child(3) { 
+			width: (75 + random(10)) * 1%; 
+			margin-top: 10%; margin-left: 5%; 
+			animation-delay: #{(random(5) - 5)}s; 
+			animation-direction: reverse;
+		}
+	}
+}

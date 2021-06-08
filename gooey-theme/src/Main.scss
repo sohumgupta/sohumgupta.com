@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&display=swap');
+@import './Fonts.scss';
+
+$display-font: 'Grobek', serif;
+$main-font: 'Manrope', sans-serif;
+
+$dark-color: #000000;
+$light-color: #e2e2e2;
+$medium-color: #808080;
+
+$light-accent-color: #66d9ff;
+$accent-color: #00bfff;
+
+body, #root {
+	width: 100vw;
+	height: fit-content;
+	min-height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	overscroll-behavior: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $main-font;
+}
+
+$transition-length: 250ms;
+$transition-delay: 0ms;
+
+/* SWIPE ANIMATION */
+.swipe-appear, .swipe-enter {
+	position: fixed;
+	background: white;
+	height: 100vh; width: 100vw;
+	top: 0; left: -100vw;
+	z-index: 5;
+}
+
+.swipe-appear-active, .swipe-enter.swipe-enter-active {
+	left: 0;
+	transition: left $transition-length linear $transition-delay;
+
+	.page-wipe {
+		left: 100vw;
+		transition: left ($transition-length * 2) linear $transition-delay;
+	}
+}
+
+.page-wipe {
+	position: fixed;
+	height: 100vh; width: 100vw;
+	top: 0; left: -100vw;
+	background: black;
+	z-index: 10;
+}

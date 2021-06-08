@@ -1,0 +1,75 @@
+@import '../../Main.scss';
+
+.intro-wrapper {
+	width: 100%;
+	height: 80vh;
+	padding: 0 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.intro-goo-wrapper, .intro-text-wrapper { 
+		position: absolute;
+		top: 48%;
+		left: 50%; 
+		transform: translate(-50%, -50%);
+	}
+
+	.intro-goo-wrapper {
+		transform: translate(-110%, -50%);
+
+		height: 60vh; width: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.intro-text-wrapper {
+		width: 50%;
+		height: fit-content;
+
+		$border-size: 0.8vh;
+
+		.intro-title {
+			font-size: Min(8vw, 6vh);
+			line-height: 0.9em;
+			margin-bottom: .5em;
+			white-space: nowrap;
+			font-family: $display-font;
+			font-weight: 900;
+		}
+
+		.intro-text {
+			font-size: Min(4vw, 3vh);
+			font-family: $display-font;
+			font-weight: 200;
+			text-align: left;
+
+			.intro-link {
+				color: inherit;
+				font-family: inherit;
+				text-decoration: none;
+				position: relative;
+				cursor: pointer;
+				font-weight: 400;
+
+				&:hover { &:after { width: 100%; transition: width 0.25s ease; } }
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 0; height: .1em;
+					background-color: $dark-color;
+					bottom: -0.05em; left: 0;
+					transition: width 0.25s ease;
+				}
+			}
+		}
+	}
+
+}
+
+.intro-resize { 
+	height: 75vh;
+}
