@@ -61,7 +61,7 @@
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-template-rows: 1fr 1fr;
-		gap: 0 1em;
+		gap: 0.25em 1em;
 
 		.resume-link {
 			display: grid;
@@ -182,7 +182,7 @@
 	}
 
 	a { text-decoration: none; color: inherit; }
-	.resume-technology { border-bottom: .25vh solid rgba($accent-color, 1); @media print { border-bottom-width: .125vh }; }
+	.resume-technology { border-bottom: .25vh solid rgba($accent-color, 0.99); @media print { border-bottom-width: .125vh }; }
 	.resume-software { border-bottom: .25vh solid rgba($dark-color, 0.6); @media print { border-bottom-width: .125vh }; }
 }
 
@@ -197,11 +197,11 @@
 	.separator { 
 		width: 0.5em !important; min-width: 0.5em; max-width: 0.5em;
 		height: 0.35vh !important;
-		margin-top: 0.5em !important; 
+		margin-top: 0.6em !important; 
 		margin-right: .5em; 
 
 		@media print {
-			height: 0.2vh !important;
+			height: 2px !important;
 		}
 	}
 }

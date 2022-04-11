@@ -98,7 +98,8 @@ class ResumePage extends React.Component {
 								<div className="resume-section-header">Education<div className="separator"/></div>
 								<mark className="accented">Brown University '22</mark>
 								Sc.B, Computer Science<br/>
-								GPA: 3.94/4.00
+								A.B, History of Art and Architecture<br/>
+								GPA: 3.97/4.00
 							</div>
 							<div className="resume-section">
 								<div className="resume-section-header">Skills<div className="separator"/></div>
@@ -108,7 +109,7 @@ class ResumePage extends React.Component {
 								</div>
 							</div>
 							<div className="resume-section">
-								<div className="resume-section-header">Courses<div className="separator"/>
+								<div className="resume-section-header">Coursework<div className="separator"/>
 									{this.renderCourses()}
 								</div>
 							</div>
